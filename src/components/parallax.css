@@ -1,0 +1,11 @@
+/* Efecto reveal */
+.reveal { opacity:0; transform: translateY(10px); transition: transform .6s ease, opacity .6s ease; will-change: transform; }
+.reveal.is-visible { opacity:1; transform:none; }
+
+/* El wrapper aplica transform dinámico para parallax */
+.px { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.is-visible { transition: none; transform: none; }
+}
+

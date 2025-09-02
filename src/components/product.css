@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* CONTENEDOR GENERAL */
+.products {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* BANNER CENTRADO */
+.products__banner {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  
+}
+.products__banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* SECCIONES */
+.products__section {
+  margin: 2rem auto;
+}
+.products__sectionTitle {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 4rem 0 1rem 0;
+  text-decoration: underline #d4ad24 10%;
+}
+
+/* GRID 3 COLUMNAS */
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* CARD: texto izq + imagen dcha, altura máx 200px */
+.productCard {
+  display: grid;
+  grid-template-columns: 1fr 60%;
+  align-items: stretch;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 12px;
+  overflow: hidden;          /* recorta si se pasa */
+  height: 200px;             /* tope de altura */
+  max-height: 200px;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.productCard__text {
+  padding: 0.8rem 1rem;
+  overflow: auto;            /* scroll si el texto es largo */
+}
+.productCard__text h3 {
+  margin: 0 0 .35rem;
+  font-size: 18px;
+}
+.productCard__text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #555;
+}
+
+.productCard__imageBtn {
+  all: unset;
+  cursor: pointer;
+  display: block;
+}
+.productCard__imageBtn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+.productCard__imageBtn:hover img {
+  transform: scale(1.03);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.6);
+  padding: 1rem;
+  z-index: 999;
+}
+.modal__content {
+  background: #fff;
+  width: min(900px, 96vw);
+  max-height: 90vh;
+  border-radius: 12px;
+  overflow: auto;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: white;
+}
+
+.productModal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.productModal__content {
+  padding: 1rem 1.2rem 1.4rem;
+}
+.productModal__content h3 {
+  margin: 0 0 .5rem;
+  font-size: 22px;
+}
+.productModal__content p {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Banner de cabecera en Products */
+.products__hero{
+  width: 105%;
+  height: 400px;
+  margin: 0 auto 2.5rem;     /* centrado + separación inferior */
+  position: relative;
+  overflow: hidden;          /* recorta la imagen si no encaja */
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.15);
+}
+
+.products__hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* que rellene sin deformarse */
+  display: block;
+}
+
+/* Ajustes responsive (opcional, por si 800px resulta muy alto en móvil) */
+@media (max-width: 1024px){
+  .products__hero{ width: 90%; height: 480px; }
+}
+@media (max-width: 640px){
+  .products__hero{ width: 94%; height: 300px; }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+  .productCard {
+    height: auto;
+    max-height: none;
+    grid-template-columns: 1fr;
+  }
+  .productCard__imageBtn {
+    height: 180px;
+  }
+}

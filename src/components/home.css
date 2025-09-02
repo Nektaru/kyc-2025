@@ -1,0 +1,266 @@
+/* === FUENTE GLOBAL: MONTSERRAT === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === SECCIÓN ZIZZI === */
+.feature--zizzi {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #FEF9EC;
+  padding: 6rem 0rem;
+}
+
+.feature__zizzi-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.feature__zizzi-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 640px;
+  padding-right: 25%;
+  margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.feature__zizzi-text h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  line-height: 1.2;
+}
+
+.feature__zizzi-text p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.feature__zizzi-text .btn {
+  align-self: center;
+  margin-top: 2%;
+}
+
+/* Imágenes lado derecho */
+.feature__zizzi-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  min-width: 320px;
+}
+
+.feature__zizzi-images img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature__zizzi-images img:hover {
+  transform: scale(1.05);
+}
+
+/* === BOTONES === */
+.btn {
+  display: inline-block;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #FEF9EC;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffffff22;
+}
+
+.btn--primary {
+  border-color: #d4ad24;
+  background: #d4ad24;
+  color: #222;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.05);
+}
+
+/* === SECCIÓN EMPELLÓN === */
+.feature--empellon {
+  width: 100%;
+  background-color: #3c4a51;
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.empellon__cards {
+  display: flex;
+  gap: 7rem;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  width: 100%;
+  justify-content: center;
+}
+
+.empellon__card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 550px;
+  text-align: center;
+  position: relative;
+}
+
+.empellon__card img {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 14px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.empellon__card:hover img {
+  transform: scale(1.03);
+}
+
+.empellon__caption {
+    margin-top: 2rem;
+    font-size: 18px;
+    color: #FEF9EC;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: -2rem;
+}
+
+/* === SECCIÓN MAPA (CARD 3) === */
+.feature--map {
+  width: 100%;
+  background-color: #FEF9EC;
+  padding: 0;
+  height: 66vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map__container {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);  
+}
+
+.map__container iframe {
+  margin-block: 1.5%;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .feature__zizzi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature__zizzi-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature__zizzi-images img {
+    max-width: 90%;
+  }
+
+  .feature__zizzi-text {
+    padding-right: 0;
+    flex: 1;
+    min-width: 300px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: -70px;
+  }
+
+  .feature__zizzi-text h2 {
+    font-size: 28px;
+  }
+
+  .feature__zizzi-text p {
+    font-size: 16px;
+  }
+
+  .empellon__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .empellon__card img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature--map {
+    height: 240px;
+    padding: 0;
+  }
+
+  .map__container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .feature__zizzi-text {
+    padding-right: 10%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .empellon__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .empellon__card img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .empellon__caption {
+    padding: 0 1rem;
+  }
+}
