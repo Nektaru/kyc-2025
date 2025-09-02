@@ -1,28 +1,29 @@
 .logoBar { 
   display: flex; 
-  justify-content: flex-start; /* Alineado a la izquierda en desktop */
+  justify-content: flex-start;     /* Alineado a la izquierda en desktop */
   padding: .6rem 1rem; 
   background: #fff;
   position: relative;
-  z-index: 2;
+  z-index: 2;                      /* desktop: como lo tenías */
 }
-
-
 
 .logoBar__img { 
   height: 360px;  
   width: 660px;
   object-fit: contain;
   margin: -5% 0% -9% 5%;
+  display: block;
 }
 
-@media (max-width: 600px) { 
+/* ====== MOBILE (solo aquí reajustamos stacking) ====== */
+@media (max-width: 768px) {
   .logoBar {
-    justify-content: center; /* Centrado en mobile */
+    justify-content: center;       /* centrado en mobile */
+    z-index: 1;                    /* por DEBAJO de la navbar en mobile */
   }
 
-  .logoBar__img {         
-    height: 170px;
-    margin: -40px 0px -70px 0px; 
-  } 
+  .logoBar__img {
+        height: 205px;
+        margin: -60px 0 -69px 0;
+  }
 }
