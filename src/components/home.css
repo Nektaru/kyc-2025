@@ -143,20 +143,22 @@ body {
 }
 
 .empellon__caption {
-    margin-top: 2rem;
-    font-size: 18px;
-    color: #FEF9EC;
-    font-weight: 500;
-    line-height: 150%;
-    margin-bottom: -2rem;
+  margin-top: 2rem;
+  font-size: 18px;
+  color: #FEF9EC;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 0; /* sin solapar la siguiente sección */
 }
+
+
 
 /* === SECCIÓN MAPA (CARD 3) === */
 .feature--map {
   width: 100%;
   background-color: #FEF9EC;
-  padding: 0;
-  height: 66vh;
+  padding: 5px;         /* borde crema 5px en todos los lados */
+  height: 66vh;         /* desktop: alto cómodo */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,11 +171,11 @@ body {
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);  
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .map__container iframe {
-  margin-block: 1.5%;
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
@@ -248,19 +250,21 @@ body {
 
 
 @media (max-width: 768px) {
-  .empellon__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .feature--map {
+    padding: 5px;     /* mantenemos el borde crema */
+    height: auto;     /* dejamos que se ajuste al ratio */
   }
 
-  .empellon__card img {
-    max-width: 90%;
+  .map__container {
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+    aspect-ratio: 16 / 9; /* alto estable sin “comerse” nada */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   }
 
-  .empellon__caption {
-    padding: 0 1rem;
+  .map__container iframe {
+    width: 100%;
+    height: 100%;
   }
 }
