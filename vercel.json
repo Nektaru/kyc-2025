@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/favicon.svg",
+      "headers": [{ "key": "Content-Type", "value": "image/svg+xml; charset=utf-8" }]
+    }
+  ]
 }
+
