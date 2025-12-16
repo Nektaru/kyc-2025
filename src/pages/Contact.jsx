@@ -1,27 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import '../components/contact.css'
 
-
-
 export default function Contact() {
-  const [sent, setSent] = useState(false)
-
   useEffect(() => {
     AOS.init({ once: true, duration: 1000, easing: 'ease-out' })
   }, [])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.currentTarget
-    // Aquí iría tu fetch/axios a una API si la añades en el futuro
-    form.reset()
-    setSent(true)
-    // Ocultar aviso a los 5s
-    setTimeout(() => setSent(false), 5000)
-  }
 
   return (
     <main className="contact">
@@ -56,7 +42,6 @@ export default function Contact() {
                 <strong>Email:</strong>{' '}
                 <a href="mailto:encargos@kiloycuarto.es">encargos@kiloycuarto.es</a>
               </li>
-              
             </ul>
           </div>
 
@@ -68,56 +53,49 @@ export default function Contact() {
           </div>
         </aside>
 
-        {/* Columna formulario */}
+        {/* Columna formulario (Google Form embebido) */}
         <section className="contact__formWrap" data-aos="fade-left">
-          <form className="contact__form" onSubmit={handleSubmit} noValidate>
-            <div className="form__row">
-              <div className="form__group">
-                <label htmlFor="name">Nombre *</label>
-                <input id="name" name="name" type="text" required placeholder="Tu nombre" />
-              </div>
-              <div className="form__group">
-                <label htmlFor="phone">Teléfono</label>
-                <input id="phone" name="phone" type="tel" placeholder="Opcional" />
-              </div>
+          <div className="contact__form">
+            <div className="form__head">
+              <h3 className="form__title">Escríbenos</h3>
+              <p className="form__subtitle">
+                Rellena el formulario y te responderemos lo antes posible.
+              </p>
             </div>
 
-            <div className="form__group">
-              <label htmlFor="email">Email *</label>
-              <input id="email" name="email" type="email" required placeholder="tucorreo@ejemplo.com" />
+            {/* IMPORTANTE:
+               1) Abre tu Google Form -> Enviar -> icono "<>" (Insertar HTML)
+               2) Copia la URL del "src" y pégala aquí.
+               Debe acabar en: /viewform?embedded=true
+            */}
+            <div className="contact__formIframeWrap" aria-label="Formulario de contacto">
+              <iframe
+                className="contact__formIframe"
+                title="Formulario de contacto Kilo y Cuarto"
+                src="PEGA_AQUI_TU_URL_DE_GOOGLE_FORM_EMBEBIDO"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
-            <div className="form__group">
-              <label htmlFor="subject">Asunto</label>
-              <select id="subject" name="subject" defaultValue="general">
-                <option value="general">Consulta general</option>
-                <option value="encargos">Encargos / Eventos</option>
-                <option value="catering">Catering</option>
-                <option value="otros">Otros</option>
-              </select>
+            {/* Aviso RGPD (nota: lo ideal es que la aceptación sea una pregunta obligatoria DENTRO del Google Form) */}
+            <div className="form__legal form__legal--note">
+              Al enviar este formulario aceptas la{' '}
+              <Link to="/privacidad" className="link">Política de Privacidad</Link>.
             </div>
 
-            <div className="form__group">
-              <label htmlFor="message">Mensaje *</label>
-              <textarea id="message" name="message" rows="6" required placeholder="Cuéntanos en qué podemos ayudarte…" />
+            {/* Alternativa: abrir el formulario en nueva pestaña (por si algún móvil lo muestra mejor) */}
+            <div className="form__actions form__actions--secondary">
+              <a
+                className="btn btn--ghost"
+                href="PEGA_AQUI_LA_URL_NORMAL_DEL_FORMULARIO"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Abrir formulario en otra pestaña
+              </a>
             </div>
-
-            <div className="form__legal">
-              <label className="checkbox">
-                <input type="checkbox" required /> Acepto la{' '}
-                <Link to="/privacidad" className="link">Política de Privacidad</Link>.
-              </label>
-            </div>
-
-            <div className="form__actions">
-              <button type="submit" className="btn btn--primary">Enviar mensaje</button>
-              {sent && (
-                <span className="form__status" role="status" aria-live="polite">
-                  ¡Gracias! Hemos recibido tu mensaje.
-                </span>
-              )}
-            </div>
-          </form>
+          </div>
         </section>
       </section>
 
