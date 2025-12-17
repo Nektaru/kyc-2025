@@ -69,13 +69,12 @@ export default function Contact() {
                Debe acabar en: /viewform?embedded=true
             */}
             <div className="contact__formIframeWrap" aria-label="Formulario de contacto">
-              <iframe
-                className="contact__formIframe"
-                title="Formulario de contacto Kilo y Cuarto"
-                src="PEGA_AQUI_TU_URL_DE_GOOGLE_FORM_EMBEBIDO"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqaChGH6Gu-sdLmm94TW4p1Td9GxMWylvfmeLQ9V2I4bCTGw/viewform?embedded=true" 
+              width="640" 
+              height="1563" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0">Cargando…</iframe>
             </div>
 
             {/* Aviso RGPD (nota: lo ideal es que la aceptación sea una pregunta obligatoria DENTRO del Google Form) */}
