@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="form__actions form__actions--secondary">
               <a
                 className="btn btn--ghost"
-                href="PEGA_AQUI_LA_URL_NORMAL_DEL_FORMULARIO"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeqaChGH6Gu-sdLmm94TW4p1Td9GxMWylvfmeLQ9V2I4bCTGw/viewform?usp=dialog"
                 target="_blank"
                 rel="noreferrer"
               >
