@@ -22,8 +22,8 @@ const slides = [
   size: 'lg',
   ctas: [
     {
-      label: 'Ver ofertas',
-      to: '/assets/OfertasSeptiembre.pdf',
+      label: 'Nuestros productos',
+      to: '/productos',
       variant: 'primary',
       newTab: true
     },
@@ -44,7 +44,7 @@ const slides = [
     pos: 'center 40%',
     size: 'md',
     ctas: [
-      { label: 'Ver nuestros productos', to: '/productos?cat=menus', variant: 'primary', internal: true },
+      { label: 'Ver nuestros productos', to: '/productos', variant: 'primary', internal: true },
       { label: 'Pide a Domicilio',          to: 'https://www.ubereats.com/es/store/kilo-y-cuarto/DH_BPz1gUQ6sTB14ELMrpQ?srsltid=AfmBOoroF3nh08S3m2e9PvCfh5nhTAFh-uIUpbmLgbP2D4hdn9sjvuRt', variant: 'ghost', newTab: true },
     ]
   },
