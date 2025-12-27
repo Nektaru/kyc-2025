@@ -22,7 +22,7 @@ export default function Products() {
         {
           id: 'pollo-asado',
           title: 'Pollo asado',
-          short: 'Pollo de corral, patatas panadera y nuestro jugo especial.',
+          short: 'Pollo de corral, patatas panadera y nuestro jugo especial...',
           long:
             'Pollo asado lentamente con mezcla de especias de la casa, sal, pimienta y nuestra salsa especial elaborada durante 32 años. Ideal para compartir.',
           img: 'pollo-asado.webp',
@@ -30,9 +30,9 @@ export default function Products() {
         {
           id: 'costillas-bbq',
           title: 'Costillas BBQ',
-          short: 'Costillas de cerdo con salsa barbacoa artesanal.',
+          short: 'Costillas de cerdo con nuestra salsa barbacoa artesanal...',
           long:
-            'Costillas cocinadas a baja temperatura durante 18 horas y glaseadas con nuestra salsa BBQ casera. Tiernas, jugosas y muy sabrosas.',
+            'Costillas cocinadas a baja temperatura durante 18 horas y glaseadas con nuestra salsa BBQ casera. Las partimos en palos para que solo tengas que preocuparte de disfrutar de unas costillas tiernas, jugosas y muy sabrosas.',
           img: 'costillas.webp',
         },
       ],
@@ -43,57 +43,57 @@ export default function Products() {
         {
           id: 'rusa',
           title: 'Ensaladilla Rusa',
-          short: 'Con canela y limón, receta tradicional.',
+          short: 'Uno de nuestros platos estrellas, el entrante perfecto...',
           long:
-            'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
+            'Nuestra famosa ensaladilla rusa con verduras frescas cortadas en cubos, mayonesa casera, atún en aceite de oliva, decorado con huevo, pimiento morrón y aceitunas.',
           img: 'rusa.webp',
         },
         {
           id: 'patatas-alioli',
           title: 'Patatas Alioli',
-          short: 'Patatas Alioli como las de toda la vida, pero con más cariño.',
+          short: 'Con ali-oli casero, perejil freso...',
           long:
-            'Patatas Alioli',
+            'Nunca pueden faltar como aperitivo en la mesa nuestras patatas con ali-oli casero y perejil fresco.',
           img: 'patatas-alioli.webp',
         },
         {
           id: 'panaderas',
           title: 'Patatas Panaderas',
-          short: 'Patatas Panaderas como las de toda la vida, pero con más cariño.',
+          short: 'Con pimiento rojo, verde, AOVE...',
           long:
-            'Patatas Panaderas',
+            'Patatas dólar fritas y horneadas para que queden perfectas, acompañadas de pimiento rojo, verde y cebolla en tiras, ajo y AOVE.',
           img: 'panaderas.webp',
         },
         {
           id: 'migas',
           title: 'Migas',
-          short: 'Migas como las de toda la vida, pero con más cariño.',
+          short: 'Migas como las de toda la vida, pero con más cariño...',
           long:
-            'Migas',
+            'Un tío nuestro de Aragón nos enseñó la receta suprema de migas (chorizo casero de pueblo, autentico pan de masa madre y tocineta), acompañadas de pimientos de padrón.',
           img: 'migas.webp',
         },
         {
           id: 'champi-ajillo',
           title: 'Champiñón al ajillo',
-          short: 'Champiñón al ajillo fresco cortado en tacos y acompañados de jamón, AOVE, jamón ibérico en tacos y mucho cariño.',
+          short: 'Cortado en tacos y acompañados de jamón, AOVE...',
           long:
-            'Champiñón al ajillo ',
+            'Un clásico de los de siempre: champiñón fresco salteado al ajillo, con aceite de oliva, ajo dorado y un toque de perejil, como se ha hecho toda la vida.',
           img: 'champi-ajillo.webp',
         },
         {
           id: 'huevos-rellenos',
           title: 'Huevos rellenos',
-          short: 'Huevos rellenos de atún, tomate, yema de huevo cocido, zanahoria y aceituna y cebolla muy muy picaditos.',
+          short: 'Atún, tomate, yema de huevo cocido...',
           long:
-            'Huevos rellenos ',
+            'Siguiendo meticulosamente la receta de la abuela, rellenamos los huevos con atún, tomate, cebolla y aceituna los cubrimos con nuestra mayonesa casera y coronamos con la yema del huevo cocido que sacamos previamente. (6 medios huevos).',
           img: 'huevos-rellenos.webp',
         },
         {
           id: 'pisto-manchego',
           title: 'Pisto manchego',
-          short: 'Pisto manchego',
+          short: 'Pisto manchego de verduras hecho con cariño y mimo...',
           long:
-            'Pisto manchego ',
+            'Freímos en AOVE calabacín, berenjena, pimiento rojo, pimiento verde, cebolla, patata y lo coronamos con un huevo frito.',
           img: 'pisto-manchego.webp',
         },
       ],
@@ -104,7 +104,7 @@ export default function Products() {
         {
           id: 'albondigas',
           title: 'Albóndigas a la jardinera',
-          short: 'Nuestras albóndigas de carne mixta (cerdo y vacuno)',
+          short: 'De carne mixta a la jardinera...',
           long:
             'Nuestras albóndigas de carne mixta (cerdo y vacuno) con una salsa jardinera que pide pan para mojar solo con olerla',
           img: 'albondigas.webp',
@@ -112,31 +112,31 @@ export default function Products() {
         {
           id: 'rusos',
           title: 'Rusos',
-          short: 'Filetes Rusos caseros hechos con carne de cerdo, sal, pimienta, ajo, perejil y nuestro ingrediente secreto.',
+          short: 'Carne de cerdo, sal, pimienta, ajo...',
           long:
-            'Nuestros filetes rusos caseros son famosos en todo San Fernando por estar hechos con la receta de nuestra abuela de Lucena',
+            'Nuestros filetes rusos caseros son famosos en todo San Fernando por estar hechos con la receta de nuestra abuela de Lucena: Carne de cerdo, sal, pimienta, ajo, perejil y nuestro ingrediente secreto',
           img: 'rusos.webp',
         },
         {
           id: 'filete-pollo',
           title: 'Filete de pollo empanado',
-          short: 'Pechuga de pollo fresca envuelta en una bechamel fina y frito al punto para que esté bien doradita',
+          short: 'Filetes de pechuga de pollo empanados con perejil...',
           long:
-            'Pollo partido en trozos, ajo picadito, aceite, sal y unas horas de horno para que todo quede con una textura perfecta',
+            'Un clásico de los de siempre: filetes de pechuga de pollo empanados con perejil, jugosos por dentro y crujientes por fuera, hechos al momento como se ha hecho toda la vida.',
           img: 'filete-pollo.webp',
         },
         {
           id: 'pechuga-villaroy',
           title: 'Pechuga Villaroy',
-          short: 'Pechuga de pollo fresca envuelta en una bechamel fina y frito al punto para que esté bien doradita',
+          short: 'Pechuga de pollo fresca envuelta en bechamel...',
           long:
-            'Pollo partido en trozos, ajo picadito, aceite, sal y unas horas de horno para que todo quede con una textura perfecta',
+            'Pechuga de pollo fresca con una cobertura de beshamel casera con nuez moscada, empanado y frito listo para disfrutar.',
           img: 'pechuga-villaroy.webp',
         },
         {
           id: 'pollo-ajillo',
           title: 'Pollo al ajillo',
-          short: 'Nuestro pollo jugoso al ajillo con una salsa irrepetible',
+          short: 'Nuestro pollo jugoso al ajillo...',
           long:
             'Pollo partido en trozos, ajo picadito, aceite, sal y unas horas de horno para que todo quede con una textura perfecta',
           img: 'pollo-ajillo.webp',
@@ -144,17 +144,17 @@ export default function Products() {
         {
           id: 'berenjena-rellena',
           title: 'Berenjena rellena',
-          short: 'Rellena de carne de ternera, berenjena y coronado con una capa de queso',
+          short: 'Rellena de carne de ternera, coronado con queso...',
           long:
-            'Nuestras berenjenas...',
+            'Partimos la berenjena a la mitad, la rellenamos de carne picada especiada y lo cerramos con queso gratinado.',
           img: 'berenjena-rellena.webp',
         },
         {
           id: 'rabo-de-toro',
           title: 'Rabo de toro al vino tinto',
-          short: 'Nuestro rabo de toro al vino tinto cocinado durante 8 horas con una salsa irrepetible',
+          short: 'Cocinado durante 8 horas al vino tinto...',
           long:
-            'Pollo partido en trozos, ajo picadito, aceite, sal y unas horas de horno para que todo quede con una textura perfecta',
+            'Rabo de toro guisado lentamente al vino, con zanahoria, a fuego suave, hasta quedar tierno y meloso, con una salsa de las de toda la vida.',
           img: 'rabo-de-toro.webp',
         },
       ],
@@ -165,17 +165,17 @@ export default function Products() {
         {
           id: 'merluza-brocoli',
           title: 'Merluza con Brócoli',
-          short: 'Con canela y limón, receta tradicional.',
+          short: 'Una merluza como nunca antes la has probado...',
           long:
-            'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
+            'Medallón de merluza con nuestra salsa casera de queso y brócoli, coronado con un langostino asado.',
           img: 'merluza-brocoli.webp',
         },
         {
           id: 'bacalao-riojana',
           title: 'Bacalao a la Riojana',
-          short: 'Bacalao a la Riojana como las de toda la vida, pero con más cariño.',
+          short: 'Bacalao a la Riojana como las de toda la vida, pero con más cariño,,.',
           long:
-            'Bacalao a la Riojana, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+            'Lomo de bacalao con nuestra salsa de tomate, pimientos verde y rojo asados y cebolla. Acompañado de patata panadera.',
           img: 'bacalao-riojana.webp',
         },
       ],
@@ -186,15 +186,15 @@ export default function Products() {
         {
           id: 'tallarines-verduras',
           title: 'Tallarines con verduras',
-          short: 'Con canela y limón, receta tradicional.',
+          short: 'Unos tallarines al wok con verduritas frescas...',
           long:
-            'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
+            'Tallarines de trigo cocidos con salsa de soja y sofritos en un wok con verduras (brócoli, pimiento rojo y verde, cebolla...).',
           img: 'tallarines-verduras.webp',
         },
         {
           id: 'macarrones-chorizo',
           title: 'Macarrones con chorizo',
-          short: 'Macarrones con tomate y chorizo gratinados con queso mozarella',
+          short: 'Macarrones con tomate y chorizo gratinados con queso mozarella...',
           long:
             'Macarrones con tomate y chorizo gratinados con queso mozarella, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
           img: 'macarrones-chorizo.webp',
@@ -207,41 +207,41 @@ export default function Products() {
         {
           id: 'tortilla-patata',
           title: 'Tortilla de Patata con o sin cebolla',
-          short: 'Al gusto, más cuajada, menos cuajada... 900gr de pura tortilla de patata',
+          short: 'Al gusto, más cuajada, menos cuajada...',
           long:
-            'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
+            'Cortamos las patatas y la cebolla finitas y las freímos en aceite de oliva virgen extra, añadimos los huevos camperos y las hacemos a tu gusto, eligiendo el punto de cuajado. (1,100 Kg aprox.).',
           img: 'tortilla-patata.webp',
         },
         {
           id: 'tortilla-calabacin',
           title: 'Tortilla de patata con calabacín',
-          short: 'Tortilla de patata con calabacín cortado en finos discos para añadir sabor y cocinado con la patata, la cebolla...',
+          short: 'Calabacín cortado en finos discos...',
           long:
-            'Cortamos fino el calabacín...',
+            'Seguimos la receta de la tortilla de patata y le añadimos unos medallones de calabacín a la plancha. (1,100 Kg aprox.).',
           img: 'tortilla-calabacin.webp',
         },
         {
           id: 'tortilla-chorizo',
           title: 'Tortilla de patata con chorizo',
-          short: 'Tortilla de patata con chorizo cortado en finos discos para añadir sabor y cocinado con la patata, la cebolla...',
+          short: 'Chorizo en trocitos para añadir sabor...',
           long:
-            'Cortamos fino el chorizo...',
+            'Añadimos a nuestra tortilla trocitos de chorizo de Potes para aumentar el sabor. (1,100 Kg aprox.).',
           img: 'tortilla-chorizo.webp',
         },
         {
           id: 'tortilla-morcilla',
           title: 'Tortilla de patata con morcilla',
-          short: 'Tortilla de patata con morcilla cortado en finos discos para añadir sabor y cocinado con la patata, la cebolla...',
+          short: 'Morcilla guisada con la patata y la cebolla...',
           long:
-            'Cortamos fino el morcilla...',
+            'Para los amantes de la morcilla de burgos, ésta es vuestra tortilla. (1,100 Kg aprox.).',
           img: 'tortilla-morcilla.webp',
         },
         {
           id: 'tortilla-queso-cabra',
           title: 'Tortilla de patata con queso de cabra',
-          short: 'Tortilla de patata con queso de cabra cortado en finos discos para añadir sabor y textura',
+          short: 'Queso de cabra cortado y cocinado con la patata...',
           long:
-            'Cortamos fino el queso de cabra...',
+            'Cortamos trocitos de queso de cabra para cocinarlos con la patata y la cebolla, y luego coronamos la tortilla con unos discos antes de terminarla.',
           img: 'tortilla-queso-cabra.webp',
         },
       ],
@@ -252,25 +252,25 @@ export default function Products() {
         {
           id: 'ensalada-cabra',
           title: 'Ensalada con queso de cabra y nueces',
-          short: 'Con canela y limón, receta tradicional.',
+          short: 'Queso de cabra, nueces y tomatitos cherry...',
           long:
-            'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
+            'Mezclum, medallones de queso de cabra, nueces, tomatitos cherry y crema balsámica de módena para regar a tu gusto.',
           img: 'ensalada-cabra.webp',
         },
         {
           id: 'ensalada-cesar',
           title: 'Ensalada César',
-          short: 'Ensalada César como las de toda la vida, pero con más cariño.',
+          short: 'Ensalada César con pollo, queso en cubos, salsa césar...',
           long:
-            'Ensalada César clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+            'Lechuga iceberg, picatostes, queso eddam en cubos, filete de contramuslo de pollo empanado, tomatitos cherry y bacon crujiente, con queso parmesano rallado por encima y salsa césar para acompañar al gusto.',
           img: 'ensalada-cesar.webp',
         },
         {
           id: 'ensalada-pollo',
           title: 'Ensalada de pollo',
-          short: 'Ensalada de pollo como las de toda la vida, pero con más cariño.',
+          short: 'Ensala de tiras de zanahoria, tiras de pechuga de pollo...',
           long:
-            'Ensalada de pollo',
+            '¿Quien dijo que el pollo y la manzana no pegan? Pues imagínate si le añades zanahoria, pasas y una deliciosa salsa de mostaza y miel.',
           img: 'ensalada-pollo.webp',
         },
       ],
@@ -289,7 +289,7 @@ export default function Products() {
         {
           id: 'aros-cebolla',
           title: 'Aros de cebolla a la cerveza',
-          short: 'Aros de cebolla a la cerveza caseros bañados en cerveza',
+          short: 'Caseros bañados en cerveza...',
           long:
             'Nuestros aros de cebolla están hechos de anillas de cebolla dulce, harina, un baño de cerveza 0,0% y fritos en abundante aceite',
           img: 'aros-cebolla.webp',
@@ -297,7 +297,7 @@ export default function Products() {
         {
           id: 'patatas-fritas',
           title: 'Patatas fritas',
-          short: 'Patatas frescas, peladas, cortadas en bastones y fritas en AOVE',
+          short: 'Peladas, cortadas en bastones y fritas en AOVE...',
           long:
             'Patata crujiente por fuera y tierna por dentro, el acompañante perfecto para cualquier carne',
           img: 'patatas-fritas.webp',
@@ -310,7 +310,7 @@ export default function Products() {
         {
           id: 'arroz-leche',
           title: 'Arroz con leche',
-          short: 'Con canela y limón, receta tradicional.',
+          short: 'Con canela y limón, receta tradicional...',
           long:
             'Cremoso, aromático y equilibrado en dulzor. El postre de siempre, como en casa.',
           img: 'arroz-con-leche.webp',
@@ -318,7 +318,7 @@ export default function Products() {
         {
           id: 'natillas',
           title: 'Natillas caseras',
-          short: 'Natillas caseras como las de toda la vida, pero con más cariño.',
+          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
           long:
             'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
           img: 'natillas.webp',
