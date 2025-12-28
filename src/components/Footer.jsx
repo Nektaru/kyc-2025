@@ -13,9 +13,9 @@
 
           <div className="footer__column footer__social">
             <p className="footer__subtitle">Síguenos</p>
-            <a href="https://instagram.com" target="_blank" rel="https://www.instagram.com/elkiloycuarto">Instagram</a>
-            <a href="https://facebook.com" target="_blank" rel="https://www.facebook.com/profile.php?id=100071089811677">Facebook</a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="https://www.tiktok.com/@elkiloycuarto">TikTok</a>
+            <a href="https://instagram.com/elkiloycuarto" target="_blank" rel="https://www.instagram.com/elkiloycuarto">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100071089811677" target="_blank" rel="https://www.facebook.com/profile.php?id=100071089811677">Facebook</a>
+            <a href="https://www.tiktok.com/@elkiloycuarto" target="_blank" rel="https://www.tiktok.com/@elkiloycuarto">TikTok</a>
           </div>
 
           <div className="footer__column footer__legal">
