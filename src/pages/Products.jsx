@@ -181,10 +181,10 @@ export default function Products() {
         {
           id: 'pim-rell',
           title: 'Pimientos de piquillo rellenos de bacalao',
-          short: 'Pimientos del piquillo rellenos de bacalao, suaves y cremosos, cubiertos con una salsa casera intensa y bien ligada.',
+          short: 'Pimientos del piquillo rellenos de bacalao, cubiertos con una salsa casera intensa y bien ligada.',
           long:
             'Pimientos del piquillo rellenos de bacalao desmigado, ligados con una bechamel suave y cremosa, servidos en una salsa casera sabrosa y equilibrada, que realza el sabor del pescado y la dulzura natural del pimiento.',
-          img: 'bacalao-riojana.webp',
+          img: 'pim-rell.webp',
         },
       ],
     },
