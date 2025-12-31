@@ -332,6 +332,83 @@ export default function Products() {
           img: 'natillas.webp',
         },
       ],
+    },
+    {
+      title: 'Nuestros encargos especiales',
+      items: [
+        {
+          id: 'paletilla-aranda',
+          title: 'Paletilla de Aranda',
+          short: 'De 400-500gr, asada lentamente, crujiente por fuera y jugosa, con guarnición tradicional.',
+          long:
+            'Paletilla de Aranda asada a baja temperatura hasta lograr una piel crujiente y carne melosa, acompañada de champiñones al ajillo y patata panadera, una guarnición clásica que completa un asado lleno de sabor y tradición.',
+          img: 'paletilla-aranda.webp',
+        },
+        {
+          id: 'paletilla-cochinillo',
+          title: 'Paletilla de cochinillo',
+          short: 'De 2-2,5Kg asada 14 horas, piel crujiente y carne melosa, con guarnición clásica.',
+          long:
+            'Paletilla de cochinillo asada lentamente durante 14 horas a baja temperatura, logrando una piel crujiente y una carne extremadamente jugosa, acompañada de champiñones al ajillo, patata panadera y la salsa natural del propio asado.',
+          img: 'paletilla-cochinillo`.webp',
+        },
+        {
+          id: 'cochinillo',
+          title: 'Cochinillo asado',
+          short: 'Asado de manera tradicional, con su piel crujiente y carne jugosa, servido con guarnición clásica.',
+          long:
+            'Cochinillo asado de 4 a 4,5 kg, horneado lentamente hasta piel crujiente y carne melosa, acompañado de champiñones al ajillo, patata panadera y la salsa natural del propio asado, que realza su sabor y tradición.',
+          img: 'cochinillo.webp',
+        },
+        {
+          id: 'capon',
+          title: 'Capón relleno',
+          short: 'Capón relleno tradicional, asado lentamente, jugoso y aromático, laminado o entero, ¡tú eliges!.',
+          long:
+            'Capón relleno al estilo tradicional navideño, asado lentamente para lograr una carne tierna y jugosa, con relleno de carne, jamón, ciruelas, pasas, manzana y frutos secos, aromatizado suavemente para un asado festivo y lleno de sabor.',
+          img: 'capon.webp',
+        },
+        {
+          id: 'natillas',
+          title: 'Natillas caseras',
+          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
+          long:
+            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+          img: 'natillas.webp',
+        },
+        {
+          id: 'natillas',
+          title: 'Natillas caseras',
+          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
+          long:
+            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+          img: 'natillas.webp',
+        },
+        {
+          id: 'natillas',
+          title: 'Natillas caseras',
+          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
+          long:
+            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+          img: 'natillas.webp',
+        },
+        {
+          id: 'mejillones-vinagreta',
+          title: 'Mejillones a la vinagreta',
+          short: 'Con hortalizas frescas picadas y un aliño suave y equilibrado.',
+          long:
+            'Mejillones cocidos y abiertos, cubiertos con una vinagreta fresca de pimiento rojo y verde y cebolla, ligeramente aliñados para potenciar el sabor del mar y ofrecer un plato ligero, refrescante y muy apetecible.',
+          img: 'mejillones-vinagreta.webp',
+        },
+        {
+          id: 'salpicon-marisco',
+          title: 'Salpicón de Marisco',
+          short: 'Fresco con langostinos, pulpo, mejillones, pimiento rojo y verde, cebolla y aceitunas.',
+          long:
+            'Salpicón de marisco elaborado con langostinos cocidos, trozos de pulpo y mejillones, mezclados con pimiento rojo y verde, cebolla fresca y aceitunas olivas, todo aliñado de forma suave para realzar el sabor natural del mar.',
+          img: 'salpicon-marisco.webp',
+        },
+      ],
     }
   ]
   // =========================================================
