@@ -350,7 +350,7 @@ export default function Products() {
           short: 'De 2-2,5Kg asada 14 horas, piel crujiente y carne melosa, con guarnición clásica.',
           long:
             'Paletilla de cochinillo asada lentamente durante 14 horas a baja temperatura, logrando una piel crujiente y una carne extremadamente jugosa, acompañada de champiñones al ajillo, patata panadera y la salsa natural del propio asado.',
-          img: 'paletilla-cochinillo`.webp',
+          img: 'paletilla-cochinillo.webp',
         },
         {
           id: 'cochinillo',
@@ -367,30 +367,6 @@ export default function Products() {
           long:
             'Capón relleno al estilo tradicional navideño, asado lentamente para lograr una carne tierna y jugosa, con relleno de carne, jamón, ciruelas, pasas, manzana y frutos secos, aromatizado suavemente para un asado festivo y lleno de sabor.',
           img: 'capon.webp',
-        },
-        {
-          id: 'natillas',
-          title: 'Natillas caseras',
-          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
-          long:
-            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
-          img: 'natillas.webp',
-        },
-        {
-          id: 'natillas',
-          title: 'Natillas caseras',
-          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
-          long:
-            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
-          img: 'natillas.webp',
-        },
-        {
-          id: 'natillas',
-          title: 'Natillas caseras',
-          short: 'Natillas caseras como las de toda la vida, pero con más cariño...',
-          long:
-            'Natillas clásicas, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
-          img: 'natillas.webp',
         },
         {
           id: 'mejillones-vinagreta',
