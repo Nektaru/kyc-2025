@@ -13,6 +13,7 @@
   object-fit: contain;
   margin: -5% 0% -9% 5%;
   display: block;
+  cursor: pointer;
 }
 
 /* ====== MOBILE (solo aquí reajustamos stacking) ====== */

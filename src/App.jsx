@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.jsx'
 import LogoBar from './components/LogoBar.jsx'
 import Footer from './components/Footer.jsx'
 import ConsentBar from './components/ConsentBar.jsx'
+import { Analytics } from '@vercel/analytics/react'
 
 
 import Home from './pages/Home.jsx'
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/privacidad" element={<Privacidad />} />
       </Routes>
+      <Analytics />
       <Footer />
       <ConsentBar />
     </>
