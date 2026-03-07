@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Estructura base */
@@ -10,6 +11,7 @@ body {
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 .contact__header {
@@ -70,6 +72,7 @@ body {
   border-radius: 14px;
   padding: 1.25rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  overflow-x: hidden;
 }
 
 .form__head {
@@ -95,9 +98,10 @@ body {
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
+  position: relative;
 }
 
-/* Ajusta la altura según tu Google Form */
+/* Desktop */
 .contact__formIframe {
   width: 100%;
   height: 720px;
@@ -180,41 +184,51 @@ body {
   border: 0;
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 1024px) {
   .contact__grid {
     grid-template-columns: 1fr;
   }
 
   .contact__formIframe {
-    height: 820px; /* en móvil suele necesitar algo más */
+    height: 820px;
   }
 }
 
-/* FIX SCROLL LATERAL EN MOBILE */
+/* Mobile fix real para Google Forms */
 @media (max-width: 600px) {
-
+  html,
   body {
     overflow-x: hidden;
+    max-width: 100%;
   }
 
   .contact {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .contact__formIframeWrap {
     overflow-x: hidden;
   }
 
-  .contact__formIframe {
-    width: 100%;
-    max-width: 100vw;
+  .contact__form {
+    padding: 1rem;
+    overflow-x: hidden;
   }
 
+  .contact__formIframeWrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .contact__formIframe {
+    width: 640px;
+    height: 1200px;
+    transform: scale(0.5);
+    transform-origin: top left;
+    border: 0;
+    display: block;
+    margin-bottom: -600px;
+  }
 }
-
-
 
 
 
