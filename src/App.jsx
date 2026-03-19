@@ -4,6 +4,8 @@ import LogoBar from './components/LogoBar.jsx'
 import Footer from './components/Footer.jsx'
 import ConsentBar from './components/ConsentBar.jsx'
 import { Analytics } from '@vercel/analytics/react'
+import ScrollToTopButton from './components/ScrollToTopButton'
+
 
 
 import Home from './pages/Home.jsx'
@@ -28,6 +30,7 @@ export default function App() {
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/privacidad" element={<Privacidad />} />
       </Routes>
+      <ScrollToTopButton />
       <Analytics />
       <Footer />
       <ConsentBar />
