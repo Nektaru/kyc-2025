@@ -181,6 +181,255 @@ body {
   border: 0;
 }
 
+
+
+/* === TOP VENTAS === */
+.topSales {
+  width: 100%;
+  background: #fff;
+  padding: 6rem 1rem;
+}
+
+.topSales__header {
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.topSales__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+.topSales__header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
+.topSales__header p {
+  margin: 1.25rem auto 0;
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.topSales__grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.topSales__card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topSales__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.10);
+}
+
+.topSales__imageWrap {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.topSales__imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.topSales__card:hover .topSales__imageWrap img {
+  transform: scale(1.04);
+}
+
+.topSales__content {
+  padding: 1.5rem 1.4rem 1.6rem;
+}
+
+.topSales__content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
+.topSales__content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* === FRANJA CTA === */
+.homeCtaBand {
+  width: 100%;
+  background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%);
+  padding: 4.5rem 1rem;
+}
+
+.homeCtaBand__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.homeCtaBand__text {
+  max-width: 700px;
+}
+
+.homeCtaBand__eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+.homeCtaBand__text h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: #fff;
+  font-weight: 800;
+}
+
+.homeCtaBand__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Variante clara sobre fondo oscuro */
+.btn--ghost-light {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.btn--ghost-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* === RESPONSIVE SOLO DE ESTAS DOS SECCIONES === */
+@media (max-width: 1024px) {
+  .topSales {
+    padding: 5rem 1rem;
+  }
+
+  .topSales__grid {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .topSales__imageWrap {
+    height: 320px;
+  }
+
+  .homeCtaBand {
+    padding: 4rem 1rem;
+  }
+
+  .homeCtaBand__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .homeCtaBand__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .topSales {
+    padding: 4rem 1rem;
+  }
+
+  .topSales__header {
+    margin-bottom: 2rem;
+  }
+
+  .topSales__eyebrow,
+  .homeCtaBand__eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .topSales__header p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .topSales__grid {
+    gap: 1.25rem;
+  }
+
+  .topSales__imageWrap {
+    height: 240px;
+  }
+
+  .topSales__content {
+    padding: 1.25rem 1.1rem 1.35rem;
+  }
+
+  .topSales__content h3 {
+    font-size: 20px;
+  }
+
+  .homeCtaBand {
+    padding: 3.5rem 1rem;
+  }
+
+  .homeCtaBand__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .homeCtaBand .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topSales__header p {
+    font-size: 15px;
+  }
+
+  .topSales__imageWrap {
+    height: 220px;
+  }
+
+  .topSales__content h3 {
+    font-size: 19px;
+  }
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .feature__zizzi-container {
@@ -267,4 +516,6 @@ body {
     width: 100%;
     height: 100%;
   }
+  
 }
+
