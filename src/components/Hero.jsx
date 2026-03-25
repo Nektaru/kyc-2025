@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './hero.css'
 
-import slide1 from '../assets/slide1.webp'
+import slide1 from '../assets/pollo2.webp'
 import slide2 from '../assets/slide2.webp'
-import slide3 from '../assets/slide3.svg'
+import slide3 from '../assets/catering.webp'
 
 /**
  * Consejo de assets:

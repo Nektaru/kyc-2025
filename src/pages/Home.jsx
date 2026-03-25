@@ -6,11 +6,12 @@ import Hero from '../components/Hero'
 
 import imagen1 from '../assets/imagen1.webp'
 import imagen2 from '../assets/cocinera.webp'
-import imagen3 from '../assets/imagen3.webp'
-import imagen4 from '../assets/verduras-prox.webp'
+import imagen3 from '../assets/pulpoygambones.webp'
+import imagen4 from '../assets/verdur.webp'
 import imagen5 from '../assets/Croquetas-mix.webp'
 import imagen6 from '../assets/arroz negro.webp'
 import imagen7 from '../assets/paletilla-cochinillo.webp'
+
 
 export default function Home() {
   useEffect(() => {
@@ -22,9 +23,9 @@ export default function Home() {
       <Hero />
 
       {/* Sección estilo Zizzi con AOS */}
-      <section className="feature feature--zizzi" data-aos="fade-up" data-aos-delay="400">
+      <section className="feature feature--zizzi" data-aos="fade-up" data-aos-delay="100">
         <div className="feature__zizzi-container">
-          <div className="feature__zizzi-text" data-aos="fade-up" data-aos-delay="600">
+          <div className="feature__zizzi-text" data-aos="fade-up" data-aos-delay="200">
             <h2>Cocinamos como tu abuela</h2>
             <p>
               Desde hace 31 años compartimos mesa contigo con la misma ilusión de siempre. Cada plato que servimos está elaborado con el cariño y la dedicación de una comida hecha en casa.<br />
@@ -34,8 +35,8 @@ export default function Home() {
             <a className="btn btn--primary btn--small" href="/productos">Ver carta</a>
           </div>
           <div className="feature__zizzi-images">
-            <img src={imagen1} alt="Croquetas de cocido" data-aos="fade-up" data-aos-delay="8000" />
-            <img src={imagen3} alt="Paella de pulpo y gambones" data-aos="fade-up" data-aos-delay="1000" />
+            <img src={imagen1} alt="Croquetas de cocido" data-aos="fade-up" data-aos-delay="100" />
+            <img src={imagen3} alt="Paella de pulpo y gambones" data-aos="fade-up" data-aos-delay="200" />
           </div>
         </div>
       </section>
@@ -74,7 +75,7 @@ export default function Home() {
 
           <article className="topSales__card" data-aos="fade-up" data-aos-delay="400">
             <div className="topSales__imageWrap">
-              <img src={imagen7} alt="Platos elaborados con producto de calidad" />
+              <img src={imagen7} alt="Asados y cocina tradicional" />
             </div>
             <div className="topSales__content">
               <h3>Asados y cocina tradicional</h3>
@@ -87,13 +88,13 @@ export default function Home() {
       {/* Sección estilo Empellón igual que antes */}
       <section className="feature feature--empellon" data-aos="fade-up" data-aos-delay="600">
         <div className="empellon__cards">
-          <div className="empellon__card" data-aos="fade-up" data-aos-delay="900">
-            <img src={imagen2} alt="Mira nuestras ofertas" />
+          <div className="empellon__card" data-aos="fade-up" data-aos-delay="100">
+            <img src={imagen2} alt="Platos elaborados con producto de calidad" />
             <p className="empellon__caption">Elaboramos nuestros platos con <br></br>materias primas seleccionadas de la más alta calidad.</p>
           </div>
 
-          <div className="empellon__card" data-aos="fade-up" data-aos-delay="1200">
-            <img src={imagen4} alt="Ven a visitarnos" />
+          <div className="empellon__card" data-aos="fade-up" data-aos-delay="200">
+            <img src={imagen4} alt="Productos de proximidad" />
             <p className="empellon__caption">Priorizamos los productos de proximidad,<br></br> por lo que apoyamos siempre el comercio local. </p>
           </div>
         </div>
