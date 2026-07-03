@@ -1,0 +1,46 @@
+# ===== Compresión GZIP (mejora velocidad de carga) =====
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# ===== Caché del navegador =====
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  # El HTML no se cachea, para que los cambios se vean al instante
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ===== Canonicalización: forzar https + www en un solo salto =====
+  # (Redirige http, no-www o ambos directamente a https://www...)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ https://www.elkiloycuarto.es/$1 [R=301,L]
+
+  # ===== Servir HTML pre-renderizado: /productos -> /productos.html =====
+  # (sin cambiar la URL; si existe la versión .html estática, se usa esa)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteRule ^ %{REQUEST_URI}.html [L]
+
+  # ===== SPA: servir index.html para el resto de rutas de React =====
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -1,8 +1,10 @@
 import '../components/legal.css'
+import Seo from '../components/Seo'
 
 export default function Privacidad() {
   return (
     <main className="legal-page">
+      <Seo title="Política de Privacidad | Kilo y Cuarto" description="Política de privacidad de Kilo y Cuarto." path="/privacidad" noindex />
       <h1>Política de Privacidad</h1>
       <p>
         Kilo y Cuarto únicamente recoge los datos personales proporcionados de forma voluntaria a través del formulario de contacto.

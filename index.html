@@ -1,14 +1,127 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Seguridad: si no hay JavaScript, mostrar el contenido pre-renderizado -->
+    <noscript>
+      <style>
+        [data-aos] { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+
+    <!-- Fuente Montserrat: preconexión + carga no bloqueante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+    </noscript>
+
+    <!-- Título y descripción por defecto (página de inicio) -->
+    <title>Kilo y Cuarto · Pollo asado y paellas para llevar en Madrid</title>
+    <meta
+      name="description"
+      content="Comida casera para llevar en San Fernando de Henares (Madrid): pollo asado, paellas y arroces, croquetas, tortillas y asados por encargo. Desde 1994. Haz tu pedido."
+    />
+    <link rel="canonical" href="https://www.elkiloycuarto.es/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#263D4B" />
+    <meta name="author" content="Kilo y Cuarto" />
+
+    <!-- Geolocalización (SEO local) -->
+    <meta name="geo.region" content="ES-MD" />
+    <meta name="geo.placename" content="San Fernando de Henares" />
+    <meta name="geo.position" content="40.4288709;-3.5362986" />
+    <meta name="ICBM" content="40.4288709, -3.5362986" />
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:site_name" content="Kilo y Cuarto" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Kilo y Cuarto · Pollo asado y paellas para llevar en Madrid" />
+    <meta property="og:description" content="Comida casera para llevar en San Fernando de Henares (Madrid): pollo asado, paellas, croquetas y asados por encargo. Desde 1994." />
+    <meta property="og:url" content="https://www.elkiloycuarto.es/" />
+    <meta property="og:image" content="https://www.elkiloycuarto.es/og-image.webp" />
+    <meta property="og:image:alt" content="Platos caseros de Kilo y Cuarto" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kilo y Cuarto · Pollo asado y paellas para llevar en Madrid" />
+    <meta name="twitter:description" content="Comida casera para llevar en San Fernando de Henares (Madrid): pollo asado, paellas, croquetas y asados. Desde 1994." />
+    <meta name="twitter:image" content="https://www.elkiloycuarto.es/og-image.webp" />
+
+    <!-- Iconos -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kilo y Cuarto</title>
+
+    <!-- Datos estructurados: negocio local / restaurante (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://www.elkiloycuarto.es/#restaurant",
+      "name": "Kilo y Cuarto",
+      "url": "https://www.elkiloycuarto.es/",
+      "image": "https://www.elkiloycuarto.es/og-image.webp",
+      "description": "Comida casera para llevar en San Fernando de Henares (Madrid): pollo asado, paellas y arroces, croquetas, tortillas, asados y encargos especiales. Cocina tradicional desde 1994.",
+      "servesCuisine": ["Española", "Casera", "Mediterránea", "Comida para llevar"],
+      "priceRange": "€€",
+      "telephone": "+34916716618",
+      "email": "encargos@kiloycuarto.es",
+      "foundingDate": "1994",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Efectivo, Tarjeta",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Toledo 2",
+        "addressLocality": "San Fernando de Henares",
+        "addressRegion": "Madrid",
+        "postalCode": "28830",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.4288709,
+        "longitude": -3.5362986
+      },
+      "hasMap": "https://www.google.com/maps?cid=9056155371097494273",
+      "areaServed": [
+        { "@type": "City", "name": "San Fernando de Henares" },
+        { "@type": "City", "name": "Coslada" },
+        { "@type": "City", "name": "Torrejón de Ardoz" },
+        { "@type": "AdministrativeArea", "name": "Madrid" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:30",
+          "closes": "15:30"
+        }
+      ],
+      "hasMenu": "https://www.elkiloycuarto.es/productos",
+      "acceptsReservations": false,
+      "sameAs": [
+        "https://www.instagram.com/elkiloycuarto",
+        "https://www.facebook.com/profile.php?id=100071089811677",
+        "https://www.tiktok.com/@elkiloycuarto",
+        "https://www.ubereats.com/es/store/kilo-y-cuarto/DH_BPz1gUQ6sTB14ELMrpQ"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './hero.css'
 
@@ -64,12 +64,20 @@ const slides = [
 
 export default function Hero() {
   const [idx, setIdx] = useState(0)
-  const timer = useRef(0)
 
+  // El timer se reinicia cada vez que cambia el slide (automática o
+  // manualmente), porque el efecto depende de `idx`.
   useEffect(() => {
-  timer.current = window.setInterval(() => setIdx(i => (i + 1) % slides.length), 8000)
-  return () => window.clearInterval(timer.current)
-}, [])
+    const id = window.setTimeout(
+      () => setIdx((i) => (i + 1) % slides.length),
+      8000
+    )
+    return () => window.clearTimeout(id)
+  }, [idx])
+
+  const goTo = (i) => setIdx((i + slides.length) % slides.length)
+  const next = () => goTo(idx + 1)
+  const prev = () => goTo(idx - 1)
 
 
   // Renderiza CTA como <Link> interno o <a> externo (tel, WhatsApp, etc.)
@@ -104,6 +112,7 @@ export default function Hero() {
               src={s.src}
               alt={s.alt}
               loading={i === 0 ? 'eager' : 'lazy'}
+              fetchPriority={i === 0 ? 'high' : 'low'}
               decoding="async"
               sizes="100vw"
               style={{ objectPosition: s.pos || 'center' }}
@@ -111,6 +120,24 @@ export default function Hero() {
           </figure>
         ))}
       </div>
+
+      {/* Flechas de navegación manual */}
+      <button
+        type="button"
+        className="hero__arrow hero__arrow--prev"
+        onClick={prev}
+        aria-label="Diapositiva anterior"
+      >
+        <span aria-hidden="true">❮</span>
+      </button>
+      <button
+        type="button"
+        className="hero__arrow hero__arrow--next"
+        onClick={next}
+        aria-label="Diapositiva siguiente"
+      >
+        <span aria-hidden="true">❯</span>
+      </button>
 
       {/* Overlay centrado y estable */}
       <div className="hero__overlay">
@@ -124,12 +151,12 @@ export default function Hero() {
       </div>
 
       {/* Dots */}
-      <div className="hero__dots" role="tablist" aria-label="Cambiar diapositiva">
+      <div className="hero__dots" role="group" aria-label="Cambiar diapositiva">
         {slides.map((_, i) => (
           <button
             key={i}
             className={`hero__dot ${i === idx ? 'is-active' : ''}`}
-            onClick={() => setIdx(i)}
+            onClick={() => goTo(i)}
             aria-label={`Ir a la diapositiva ${i + 1}`}
             aria-pressed={i === idx}
           />

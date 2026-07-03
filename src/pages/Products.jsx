@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../components/product.css'
 import ProductCard from '../components/ProductCard'
 import Modal from '../components/Modal'
+import Seo from '../components/Seo'
 import homepage from '../assets/products/homepage.webp'
 
 // Mapea automáticamente todas las imágenes en /src/assets/products
@@ -391,9 +392,20 @@ export default function Products() {
 
   return (
     <main className="products">
+      <Seo
+        title="Carta: pollo asado, paellas, croquetas y asados | Kilo y Cuarto"
+        description="Nuestra carta de comida casera para llevar: pollo asado, paellas y arroces, croquetas, costillas, tortillas, asados y encargos especiales en San Fernando de Henares (Madrid)."
+        path="/productos"
+      />
+
+      <h1 className="sr-only">
+        Carta de Kilo y Cuarto: pollo asado, paellas, croquetas, asados y comida
+        casera para llevar en San Fernando de Henares (Madrid)
+      </h1>
+
       {/* Banner centrado con márgenes */}
       <div className="products__hero">
-        <img src={homepage} alt="Nuestros productos" />
+        <img src={homepage} alt="Carta de comida casera para llevar de Kilo y Cuarto: pollo asado, paellas y asados" />
       </div>
 
 

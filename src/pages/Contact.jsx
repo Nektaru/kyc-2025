@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import '../components/contact.css'
+import Seo from '../components/Seo'
+import MapEmbed from '../components/MapEmbed'
 
 export default function Contact() {
   useEffect(() => {
@@ -11,6 +13,12 @@ export default function Contact() {
 
   return (
     <main className="contact">
+      <Seo
+        title="Contacto y horario | Kilo y Cuarto · San Fernando de Henares"
+        description="Dónde estamos, horario y teléfono de Kilo y Cuarto en San Fernando de Henares (Madrid). Haz tu encargo de pollo asado, paellas y comida casera para llevar."
+        path="/contacto"
+      />
+
       {/* Cabecera / Intro */}
       <header className="contact__header" data-aos="fade-up">
         <h1>Contacto</h1>
@@ -98,17 +106,9 @@ export default function Contact() {
         </section>
       </section>
 
-      {/* Mapa embebido */}
+      {/* Mapa embebido (carga diferida al hacer clic) */}
       <section className="contact__map" data-aos="fade-up">
-        <div className="map__container">
-          <iframe
-            title="Ubicación Kilo y Cuarto"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.697885885374!2d-3.5362986!3d40.4288709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42308f645812db%3A0x7daded5415031301!2sKilo%20y%20Cuarto!5e0!3m2!1ses!2ses!4v1698916484247!5m2!1ses!2ses"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen=""
-          ></iframe>
-        </div>
+        <MapEmbed title="Ubicación Kilo y Cuarto" />
       </section>
     </main>
   )

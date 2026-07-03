@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import '../components/about.css'
+import Seo from '../components/Seo'
 
 import about1 from '../assets/about/kiloycuartold.webp'
 import about2 from '../assets/about/fruteria.webp'
@@ -49,6 +50,17 @@ export default function About() {
 
   return (
     <main className="about">
+      <Seo
+        title="Sobre nosotros · Cocina casera desde 1994 | Kilo y Cuarto"
+        description="Desde 1994 cocinamos como en casa en San Fernando de Henares (Madrid): producto local de temporada, recetas de siempre y comida para llevar hecha con cariño."
+        path="/about"
+      />
+
+      <h1 className="sr-only">
+        Sobre Kilo y Cuarto: cocina casera para llevar desde 1994 en San Fernando
+        de Henares (Madrid)
+      </h1>
+
       {sections.map((s, i) => (
         <section
           key={i}

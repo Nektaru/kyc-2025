@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Milkshake';
-  src: url('../fonts/Milkshake.otf') format('opentype');
+  src: url('../assets/fonts/Milkshake.woff2') format('woff2');
+  font-display: swap;
 }
 
 .footer {

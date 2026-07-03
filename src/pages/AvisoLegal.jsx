@@ -1,8 +1,10 @@
 import '../components/legal.css'
+import Seo from '../components/Seo'
 
 export default function AvisoLegal() {
   return (
     <main className="legal-page">
+      <Seo title="Aviso Legal | Kilo y Cuarto" description="Aviso legal de Kilo y Cuarto." path="/aviso-legal" noindex />
       <h1>Aviso Legal</h1>
       <p><strong>Responsable:</strong> Kilo y Cuarto</p>
       <p><strong>Actividad:</strong> Comida preparada para llevar.</p>
