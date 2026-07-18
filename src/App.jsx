@@ -4,7 +4,6 @@ import NavBar from './components/NavBar.jsx'
 import LogoBar from './components/LogoBar.jsx'
 import Footer from './components/Footer.jsx'
 import ConsentBar from './components/ConsentBar.jsx'
-import { Analytics } from '@vercel/analytics/react'
 import ScrollToTopButton from './components/ScrollToTopButton'
 
 // Home se carga de inmediato (es la portada y el elemento LCP).
@@ -36,7 +35,6 @@ export default function App() {
         </Routes>
       </Suspense>
       <ScrollToTopButton />
-      <Analytics />
       <Footer />
       <ConsentBar />
     </>

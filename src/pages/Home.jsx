@@ -6,13 +6,21 @@ import Hero from '../components/Hero'
 import Seo from '../components/Seo'
 import MapEmbed from '../components/MapEmbed'
 
-import imagen1 from '../assets/imagen1.webp'
-import imagen2 from '../assets/cocinera.webp'
-import imagen3 from '../assets/pulpoygambones.webp'
-import imagen4 from '../assets/verdur.webp'
-import imagen5 from '../assets/Croquetas-mix.webp'
-import imagen6 from '../assets/arroz negro.webp'
-import imagen7 from '../assets/paletilla-cochinillo.webp'
+// Imágenes de contenido en varios tamaños (srcset): móvil descarga versiones ligeras
+import imagen1Set from '../assets/imagen1.webp?w=550;800;1024&format=webp&quality=80&as=srcset'
+import imagen1Url from '../assets/imagen1.webp?w=1024&format=webp&quality=80&as=url'
+import imagen2Set from '../assets/cocinera.webp?w=600;900;1100&format=webp&quality=80&as=srcset'
+import imagen2Url from '../assets/cocinera.webp?w=1100&format=webp&quality=80&as=url'
+import imagen3Set from '../assets/pulpoygambones.webp?w=550;800;1100&format=webp&quality=80&as=srcset'
+import imagen3Url from '../assets/pulpoygambones.webp?w=1100&format=webp&quality=80&as=url'
+import imagen4Set from '../assets/verdur.webp?w=600;900;1100&format=webp&quality=80&as=srcset'
+import imagen4Url from '../assets/verdur.webp?w=1100&format=webp&quality=80&as=url'
+import imagen5Set from '../assets/Croquetas-mix.webp?w=450;700;900&format=webp&quality=80&as=srcset'
+import imagen5Url from '../assets/Croquetas-mix.webp?w=900&format=webp&quality=80&as=url'
+import imagen6Set from '../assets/arroz negro.webp?w=450;700;900&format=webp&quality=80&as=srcset'
+import imagen6Url from '../assets/arroz negro.webp?w=900&format=webp&quality=80&as=url'
+import imagen7Set from '../assets/paletilla-cochinillo.webp?w=450;700;900&format=webp&quality=80&as=srcset'
+import imagen7Url from '../assets/paletilla-cochinillo.webp?w=900&format=webp&quality=80&as=url'
 
 
 export default function Home() {
@@ -42,8 +50,8 @@ export default function Home() {
             <a className="btn btn--primary btn--small" href="/productos">Ver carta</a>
           </div>
           <div className="feature__zizzi-images">
-            <img src={imagen1} alt="Croquetas de cocido" width="1024" height="683" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="100" />
-            <img src={imagen3} alt="Paella de pulpo y gambones" width="1100" height="1100" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="200" />
+            <img src={imagen1Url} srcSet={imagen1Set} sizes="(max-width: 900px) 90vw, 550px" alt="Croquetas de cocido" width="1024" height="683" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="100" />
+            <img src={imagen3Url} srcSet={imagen3Set} sizes="(max-width: 900px) 90vw, 550px" alt="Paella de pulpo y gambones" width="1100" height="1100" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="200" />
           </div>
         </div>
       </section>
@@ -62,7 +70,7 @@ export default function Home() {
         <div className="topSales__grid">
           <article className="topSales__card" data-aos="fade-up" data-aos-delay="100">
             <div className="topSales__imageWrap">
-              <img src={imagen5} alt="Croquetas caseras" loading="lazy" decoding="async" />
+              <img src={imagen5Url} srcSet={imagen5Set} sizes="(max-width: 900px) 90vw, 450px" alt="Croquetas caseras" loading="lazy" decoding="async" />
             </div>
             <div className="topSales__content">
               <h3>Croquetas caseras</h3>
@@ -72,7 +80,7 @@ export default function Home() {
 
           <article className="topSales__card" data-aos="fade-up" data-aos-delay="250">
             <div className="topSales__imageWrap">
-              <img src={imagen6} alt="Arroces y paellas" loading="lazy" decoding="async" />
+              <img src={imagen6Url} srcSet={imagen6Set} sizes="(max-width: 900px) 90vw, 450px" alt="Arroces y paellas" loading="lazy" decoding="async" />
             </div>
             <div className="topSales__content">
               <h3>Arroces y paellas</h3>
@@ -82,7 +90,7 @@ export default function Home() {
 
           <article className="topSales__card" data-aos="fade-up" data-aos-delay="400">
             <div className="topSales__imageWrap">
-              <img src={imagen7} alt="Asados y cocina tradicional" loading="lazy" decoding="async" />
+              <img src={imagen7Url} srcSet={imagen7Set} sizes="(max-width: 900px) 90vw, 450px" alt="Asados y cocina tradicional" loading="lazy" decoding="async" />
             </div>
             <div className="topSales__content">
               <h3>Asados y cocina tradicional</h3>
@@ -96,12 +104,12 @@ export default function Home() {
       <section className="feature feature--empellon" data-aos="fade-up" data-aos-delay="600">
         <div className="empellon__cards">
           <div className="empellon__card" data-aos="fade-up" data-aos-delay="100">
-            <img src={imagen2} alt="Platos elaborados con producto de calidad" width="1100" height="733" loading="lazy" decoding="async" />
+            <img src={imagen2Url} srcSet={imagen2Set} sizes="(max-width: 900px) 90vw, 560px" alt="Platos elaborados con producto de calidad" width="1100" height="733" loading="lazy" decoding="async" />
             <p className="empellon__caption">Elaboramos nuestros platos con <br></br>materias primas seleccionadas de la más alta calidad.</p>
           </div>
 
           <div className="empellon__card" data-aos="fade-up" data-aos-delay="200">
-            <img src={imagen4} alt="Productos de proximidad" width="1100" height="733" loading="lazy" decoding="async" />
+            <img src={imagen4Url} srcSet={imagen4Set} sizes="(max-width: 900px) 90vw, 560px" alt="Productos de proximidad" width="1100" height="733" loading="lazy" decoding="async" />
             <p className="empellon__caption">Priorizamos los productos de proximidad,<br></br> por lo que apoyamos siempre el comercio local. </p>
           </div>
         </div>

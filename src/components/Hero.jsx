@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './hero.css'
 
-import slide1 from '../assets/pollo2.webp'
-import slide2 from '../assets/slide2.webp'
-import slide3 from '../assets/catering.webp'
+// Imágenes adaptables: cada slide en varios anchos; el navegador elige el
+// óptimo según la pantalla (srcset). Móvil descarga una versión mucho más ligera.
+import pollo2Set from '../assets/pollo2.webp?w=768;1200;1500&format=webp&quality=86&as=srcset'
+import pollo2Url from '../assets/pollo2.webp?w=1200&format=webp&quality=86&as=url'
+import slide2Set from '../assets/slide2.webp?w=768;1312&format=webp&quality=80&as=srcset'
+import slide2Url from '../assets/slide2.webp?w=1312&format=webp&quality=80&as=url'
+import cateringSet from '../assets/catering.webp?w=768;1078&format=webp&quality=80&as=srcset'
+import cateringUrl from '../assets/catering.webp?w=1078&format=webp&quality=80&as=url'
 
 /**
  * Consejo de assets:
@@ -14,7 +19,8 @@ import slide3 from '../assets/catering.webp'
  */
 const slides = [
   {
-  src: slide1,
+  src: pollo2Url,
+  srcSet: pollo2Set,
   alt: 'Los mejores pollos asados de Madrid',
   h1: 'Los mejores pollos asados de Madrid',
   p: 'Están en Kilo y Cuarto',
@@ -37,7 +43,8 @@ const slides = [
 }
 ,
   {
-    src: slide2,
+    src: slide2Url,
+    srcSet: slide2Set,
     alt: 'Cocinando para ti desde 1994',
     h1:  'Cocinando para ti desde 1994',
     p:   'Como si fuésemos tu propia abuela',
@@ -49,7 +56,8 @@ const slides = [
     ]
   },
   {
-    src: slide3,
+    src: cateringUrl,
+    srcSet: cateringSet,
     alt: 'Caterings y eventos',
     h1:  'Caterings y eventos',
     p:   'Cuénta con nosotros para tus momentos más especiales',
@@ -110,6 +118,7 @@ export default function Hero() {
           <figure className="hero__slide" key={i}>
             <img
               src={s.src}
+              srcSet={s.srcSet}
               alt={s.alt}
               loading={i === 0 ? 'eager' : 'lazy'}
               fetchPriority={i === 0 ? 'high' : 'low'}

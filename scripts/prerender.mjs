@@ -15,6 +15,18 @@ const ROUTES = [
   '/privacidad',
 ]
 
+// Incrusta el CSS principal (index-*.css) directamente en el HTML y elimina el
+// <link>, para quitarlo de la ruta crítica (deja de bloquear el renderizado).
+function inlineMainCss(html) {
+  const linkRe = /<link\b[^>]*rel="stylesheet"[^>]*href="(\/assets\/index-[^"]+\.css)"[^>]*>/i
+  const m = html.match(linkRe)
+  if (!m) return html
+  const cssPath = path.join(DIST, m[1])
+  if (!fs.existsSync(cssPath)) return html
+  const css = fs.readFileSync(cssPath, 'utf8')
+  return html.replace(linkRe, `<style>${css}</style>`)
+}
+
 const MIME = {
   '.html': 'text/html',
   '.js': 'text/javascript',
@@ -76,7 +88,8 @@ for (const route of ROUTES) {
     })
   })
 
-  const html = await page.content()
+  let html = await page.content()
+  html = inlineMainCss(html)
   const outPath =
     route === '/'
       ? path.join(DIST, 'index.html')
