@@ -32,8 +32,8 @@ export default function Home() {
   return (
     <main className="home">
       <Seo
-        title="Kilo y Cuarto · Pollo asado y paellas para llevar en Madrid"
-        description="Comida casera para llevar en San Fernando de Henares (Madrid): pollo asado, paellas y arroces, croquetas, tortillas y asados por encargo. Desde 1994. Haz tu pedido."
+        title="Kilo y Cuarto · Comida para llevar en San Fernando de Henares"
+        description="Comida para llevar en San Fernando de Henares (Madrid): pollo asado, paellas y arroces, croquetas, tortillas y asados por encargo. Cocina casera desde 1994. Haz tu pedido."
         path="/"
       />
       <Hero />
