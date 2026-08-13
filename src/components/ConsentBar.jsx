@@ -1,6 +1,7 @@
 import './consentBar.css'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { loadGA } from '../analytics'
 
 export default function ConsentBar() {
   const [accepted, setAccepted] = useState(true)
@@ -13,6 +14,7 @@ export default function ConsentBar() {
   const handleAccept = () => {
     localStorage.setItem('cookiesAccepted', 'true')
     setAccepted(true)
+    loadGA() // activa Google Analytics solo tras aceptar
   }
 
   if (accepted) return null

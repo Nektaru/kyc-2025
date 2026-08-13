@@ -6,8 +6,8 @@ import './hero.css'
 // óptimo según la pantalla (srcset). Móvil descarga una versión mucho más ligera.
 import pollo2Set from '../assets/pollo2.webp?w=768;1200;1500&format=webp&quality=86&as=srcset'
 import pollo2Url from '../assets/pollo2.webp?w=1200&format=webp&quality=86&as=url'
-import slide2Set from '../assets/slide2.webp?w=768;1312&format=webp&quality=80&as=srcset'
-import slide2Url from '../assets/slide2.webp?w=1312&format=webp&quality=80&as=url'
+import slide2Set from '../assets/local-2026.webp?w=768;1280;1920&format=webp&quality=80&as=srcset'
+import slide2Url from '../assets/local-2026.webp?w=1280&format=webp&quality=80&as=url'
 import cateringSet from '../assets/catering.webp?w=768;1078&format=webp&quality=80&as=srcset'
 import cateringUrl from '../assets/catering.webp?w=1078&format=webp&quality=80&as=url'
 
@@ -28,10 +28,10 @@ const slides = [
   size: 'lg',
   ctas: [
     {
-      label: 'Nuestros productos',
-      to: '/productos',
+      label: 'Nuestras ofertas',
+      to: '/ofertas',
       variant: 'primary',
-      newTab: true
+      internal: true
     },
     {
       label: 'Cómo llegar',
@@ -45,7 +45,7 @@ const slides = [
   {
     src: slide2Url,
     srcSet: slide2Set,
-    alt: 'Cocinando para ti desde 1994',
+    alt: 'El local de Kilo y Cuarto en San Fernando de Henares',
     h1:  'Cocinando para ti desde 1994',
     p:   'Como si fuésemos tu propia abuela',
     pos: 'center 40%',

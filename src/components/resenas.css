@@ -1,0 +1,77 @@
+.resenas {
+  background: #fef9ec;
+  padding: 4rem 1.5rem 5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.resenas__header {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.resenas__stars {
+  color: #d4ad24;
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.resenas__header h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  font-weight: 800;
+  color: #263d4b;
+  margin: 0 0 0.75rem;
+}
+
+.resenas__header p {
+  color: #5f5a4c;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.resenas__grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* En la página, la ficha va sobre blanco para separar del fondo crema */
+.resenas .reviewCard {
+  background: #fff;
+}
+
+/* Texto completo (sin recorte) en la página de reseñas */
+.reviewCard__text--full {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
+}
+
+.resenas__cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.resenas__cta p {
+  color: #5f5a4c;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .resenas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .resenas__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,6 +3,7 @@ import '../components/product.css'
 import ProductCard from '../components/ProductCard'
 import Modal from '../components/Modal'
 import Seo from '../components/Seo'
+import { trackEvent } from '../analytics'
 import homepage from '../assets/products/homepage.webp'
 
 // Mapea automáticamente todas las imágenes en /src/assets/products
@@ -190,6 +191,27 @@ export default function Products() {
       ],
     },
     {
+      title: 'Nuestros arroces',
+      items: [
+        {
+          id: 'arroz-hindu',
+          title: 'Arroz Hindú',
+          short: 'Arroz con pollo en salsa curry, champiñones, verduras y un toque de pasas...',
+          long:
+            'Arroz con pollo asado en salsa curry, salteado con champiñones, zanahoria, pimiento y cebolla, con un toque de pasas que equilibra el conjunto. Un plato aromático, especiado y muy sabroso.',
+          img: 'arroz-hindu.webp',
+        },
+        {
+          id: 'risotto-funghi',
+          title: 'Risotto al Funghi',
+          short: 'Risotto cremoso de setas, cocinado lentamente hasta lograr una textura suave y envolvente...',
+          long:
+            'Risotto de setas cremoso, elaborado con arroz en su punto y cocinado lentamente para conseguir una textura suave y envolvente. Aroma y sabor, con el carácter intenso de las setas.',
+          img: 'risotto-funghi.webp',
+        },
+      ],
+    },
+    {
       title: 'Nuestras pastas',
       items: [
         {
@@ -207,6 +229,30 @@ export default function Products() {
           long:
             'Macarrones con tomate y chorizo gratinados con queso mozarella, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
           img: 'macarrones-chorizo.webp',
+        },
+        {
+          id: 'ravioli-3-formaggi',
+          title: 'Ravioli 3 Formaggi',
+          short: 'Ravioli de carne con salsa cremosa de tres quesos: azul, curado y de vaca...',
+          long:
+            'Ravioli rellenos de carne, con una salsa cremosa de tres quesos —queso azul, queso curado y queso de vaca— inspirada en recetas italianas, donde todo se funde en un sabor intenso y equilibrado.',
+          img: 'ravioli-3-formaggi.webp',
+        },
+        {
+          id: 'tagliatelle-marinara',
+          title: 'Tagliatelle Marinara',
+          short: 'Tagliatelle con salsa marinara casera cocinada a fuego lento con mejillones y gambas...',
+          long:
+            'Pasta italiana con salsa marinara casera cocinada a fuego lento con mejillones y gambas, donde el tomate y el marisco se funden en una salsa llena de sabor. Un plato elaborado con mimo, que sabe a mar en cada bocado.',
+          img: 'tagliatelle-marinara.webp',
+        },
+        {
+          id: 'tortellini-ricotta-espinacas',
+          title: 'Tortellini Ricotta e Spinachi',
+          short: 'Tortellini de ricotta y espinacas en suave salsa a las finas hierbas...',
+          long:
+            'Tortellini rellenos de ricotta y espinacas, con una suave salsa a las finas hierbas donde todo se integra en un sabor delicado y cremoso. Un plato elaborado con mimo, ligero y lleno de matices.',
+          img: 'tortellini-ricotta-espinacas.webp',
         },
       ],
     },
@@ -421,7 +467,10 @@ export default function Products() {
                 title={item.title}
                 text={item.short}
                 imgSrc={images[`../assets/products/${item.img}`]}
-                onOpen={() => setModalItem(item)}
+                onOpen={() => {
+                  setModalItem(item)
+                  trackEvent('ver_producto', { producto: item.title })
+                }}
               />
             ))}
           </div>

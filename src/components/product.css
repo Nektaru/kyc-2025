@@ -61,7 +61,7 @@ body {
 
 .productCard__text {
   padding: 0.8rem 1rem;
-  overflow: auto;            /* scroll si el texto es largo */
+  overflow: hidden;          /* sin scroll: el texto se recorta con "..." */
 }
 .productCard__text h3 {
   margin: 0 0 .35rem;
@@ -72,6 +72,10 @@ body {
   font-size: 14px;
   line-height: 1.35;
   color: #555;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     /* máximo 3 líneas + puntos suspensivos */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .productCard__imageBtn {
@@ -183,4 +187,28 @@ body {
   .productCard__imageBtn {
     height: 180px;
   }
+}
+
+/* Pastilla "+ información" en las tarjetas de producto */
+.productCard__more {
+  margin-top: 0.85rem;
+  display: inline-block;
+  background: #263D4B;
+  color: #FEF9EC;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.productCard__more:hover,
+.productCard__more:focus-visible {
+  background: #d4ad24;
+  color: #263D4B;
+  transform: translateY(-1px);
 }
