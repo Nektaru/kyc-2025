@@ -5,6 +5,7 @@ import AOS from 'aos'
 import Hero from '../components/Hero'
 import Seo from '../components/Seo'
 import MapEmbed from '../components/MapEmbed'
+import ReviewsCarousel from '../components/ReviewsCarousel'
 
 // Imágenes de contenido en varios tamaños (srcset): móvil descarga versiones ligeras
 import imagen1Set from '../assets/imagen1.webp?w=550;800;1024&format=webp&quality=80&as=srcset'
@@ -129,6 +130,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Carrusel de reseñas de clientes */}
+      <ReviewsCarousel />
 
       <section className="feature feature--map" id="mapa" data-aos="fade-up" data-aos-duration="1800">
         <MapEmbed title="Ubicación Kilo y Cuarto" />

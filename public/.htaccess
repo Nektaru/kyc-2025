@@ -31,6 +31,11 @@
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^(.*)$ https://www.elkiloycuarto.es/$1 [R=301,L]
 
+  # ===== Limpieza de URLs residuales del WordPress antiguo =====
+  # Devuelven 410 (Gone) para que Google las elimine del índice.
+  RewriteRule ^(comments|feed|wp-content|wp-includes|wp-admin|wp-json)(/|$) - [G,L]
+  RewriteRule ^(xmlrpc|wp-login)\.php$ - [G,L]
+
   # ===== Servir HTML pre-renderizado: /productos -> /productos.html =====
   # (sin cambiar la URL; si existe la versión .html estática, se usa esa)
   RewriteCond %{REQUEST_FILENAME} !-f

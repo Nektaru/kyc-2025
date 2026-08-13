@@ -7,6 +7,8 @@ const DIST = path.resolve('dist')
 const PORT = 4599
 const ROUTES = [
   '/',
+  '/ofertas',
+  '/resenas',
   '/productos',
   '/about',
   '/contacto',
