@@ -1,0 +1,43 @@
+.breadcrumbs {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.1rem 1.25rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: '/';
+  margin: 0 0.5rem;
+  color: #ccc;
+}
+
+.breadcrumbs a {
+  color: #777;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: #263d4b;
+  text-decoration: underline;
+}
+
+.breadcrumbs [aria-current='page'] {
+  color: #263d4b;
+  font-weight: 600;
+}

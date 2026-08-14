@@ -33,6 +33,15 @@ export default function Footer() {
           </ul>
         </nav>
 
+        <nav className="footer__col" aria-label="Especialidades">
+          <h3>Especialidades</h3>
+          <ul>
+            <li><Link to="/pollo-asado-san-fernando-de-henares">Pollo asado</Link></li>
+            <li><Link to="/paellas-san-fernando-de-henares">Paellas y arroces</Link></li>
+            <li><Link to="/asados-por-encargo">Asados por encargo</Link></li>
+          </ul>
+        </nav>
+
         <div className="footer__col">
           <h3>Dónde estamos</h3>
           <ul>

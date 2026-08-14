@@ -20,6 +20,8 @@ export default function Products() {
   const sections = [
     {
       title: 'Nuestros asados',
+      id: 'asados',
+      link: { to: '/pollo-asado-san-fernando-de-henares', label: 'Descubre nuestro pollo asado →' },
       items: [
         {
           id: 'pollo-asado',
@@ -41,22 +43,15 @@ export default function Products() {
     },
     {
       title: 'Nuestros acompañantes',
+      id: 'acompanamientos',
       items: [
         {
           id: 'rusa',
           title: 'Ensaladilla Rusa',
-          short: 'Uno de nuestros platos estrellas, el entrante perfecto...',
+          short: 'Uno de nuestros platos estrella, el entrante perfecto...',
           long:
             'Nuestra famosa ensaladilla rusa con verduras frescas cortadas en cubos, mayonesa casera, atún en aceite de oliva, decorado con huevo, pimiento morrón y aceitunas.',
           img: 'rusa.webp',
-        },
-        {
-          id: 'patatas-alioli',
-          title: 'Patatas Alioli',
-          short: 'Con ali-oli casero, perejil freso...',
-          long:
-            'Nunca pueden faltar como aperitivo en la mesa nuestras patatas con ali-oli casero y perejil fresco.',
-          img: 'patatas-alioli.webp',
         },
         {
           id: 'panaderas',
@@ -73,14 +68,6 @@ export default function Products() {
           long:
             'Un tío nuestro de Aragón nos enseñó la receta suprema de migas (chorizo casero de pueblo, autentico pan de masa madre y tocineta), acompañadas de pimientos de padrón.',
           img: 'migas.webp',
-        },
-        {
-          id: 'champi-ajillo',
-          title: 'Champiñón al ajillo',
-          short: 'Cortado en tacos y acompañados de jamón, AOVE...',
-          long:
-            'Un clásico de los de siempre: champiñón fresco salteado al ajillo, con aceite de oliva, ajo dorado y un toque de perejil, como se ha hecho toda la vida.',
-          img: 'champi-ajillo.webp',
         },
         {
           id: 'huevos-rellenos',
@@ -102,6 +89,7 @@ export default function Products() {
     },
     {
       title: 'Nuestras carnes',
+      id: 'carnes',
       items: [
         {
           id: 'albondigas',
@@ -163,6 +151,7 @@ export default function Products() {
     },
     {
       title: 'Nuestros pescados',
+      id: 'pescados',
       items: [
         {
           id: 'merluza-brocoli',
@@ -175,7 +164,7 @@ export default function Products() {
         {
           id: 'bacalao-riojana',
           title: 'Bacalao a la Riojana',
-          short: 'Bacalao a la Riojana como las de toda la vida, pero con más cariño,,.',
+          short: 'Bacalao a la Riojana como las de toda la vida, pero con más cariño.',
           long:
             'Lomo de bacalao con nuestra salsa de tomate, pimientos verde y rojo asados y cebolla. Acompañado de patata panadera.',
           img: 'bacalao-riojana.webp',
@@ -191,8 +180,34 @@ export default function Products() {
       ],
     },
     {
-      title: 'Nuestros arroces',
+      title: 'Paellas y arroces',
+      id: 'paellas-arroces',
+      link: { to: '/paellas-san-fernando-de-henares', label: 'Ver todas nuestras paellas y arroces →' },
       items: [
+        {
+          id: 'paella-valenciana',
+          title: 'Paella Valenciana',
+          short: 'Receta tradicional de paella con pollo y verduras, cocinada a fuego lento...',
+          long:
+            'Nuestra paella valenciana, elaborada con pollo, verduras de temporada y el punto de arroz de siempre. Se prepara por encargo: consulta disponibilidad al 91 671 66 18.',
+          img: 'paella-valenciana.webp',
+        },
+        {
+          id: 'paella-pulpo-gambones',
+          title: 'Paella de pulpo y gambones',
+          short: 'Una de nuestras combinaciones más pedidas, con pulpo tierno y gambones...',
+          long:
+            'Paella de pulpo y gambones, con producto fresco de mar y el arroz en su punto. Una de las variedades más solicitadas para encargos y celebraciones.',
+          img: 'paella-pulpo-gambones.webp',
+        },
+        {
+          id: 'arroz-negro',
+          title: 'Arroz Negro',
+          short: 'Con tinta de calamar, sabor intenso a mar y textura melosa...',
+          long:
+            'Arroz negro elaborado con tinta de calamar, de sabor intenso y textura melosa, para los que buscan un arroz con mucho carácter.',
+          img: 'arroz-negro.webp',
+        },
         {
           id: 'arroz-hindu',
           title: 'Arroz Hindú',
@@ -213,6 +228,7 @@ export default function Products() {
     },
     {
       title: 'Nuestras pastas',
+      id: 'pastas',
       items: [
         {
           id: 'tallarines-verduras',
@@ -225,9 +241,9 @@ export default function Products() {
         {
           id: 'macarrones-chorizo',
           title: 'Macarrones con chorizo',
-          short: 'Macarrones con tomate y chorizo gratinados con queso mozarella...',
+          short: 'Macarrones con tomate y chorizo gratinados con queso mozzarella...',
           long:
-            'Macarrones con tomate y chorizo gratinados con queso mozarella, textura suave y unas galletas María para coronar el postre más mítico. Perfecto para cerrar la comida.',
+            'Macarrones con tomate y chorizo gratinados con queso mozzarella, en una salsa de tomate casera con el toque justo de sabor. Un clásico que nunca falla.',
           img: 'macarrones-chorizo.webp',
         },
         {
@@ -258,6 +274,7 @@ export default function Products() {
     },
     {
       title: 'Nuestros tortillones',
+      id: 'tortillones',
       items: [
         {
           id: 'tortilla-patata',
@@ -303,6 +320,7 @@ export default function Products() {
     },
     {
       title: 'Nuestras ensaladas',
+      id: 'ensaladas',
       items: [
         {
           id: 'ensalada-cabra',
@@ -323,7 +341,7 @@ export default function Products() {
         {
           id: 'ensalada-pollo',
           title: 'Ensalada de pollo',
-          short: 'Ensala de tiras de zanahoria, tiras de pechuga de pollo...',
+          short: 'Ensalada de tiras de zanahoria, tiras de pechuga de pollo...',
           long:
             '¿Quien dijo que el pollo y la manzana no pegan? Pues imagínate si le añades zanahoria, pasas y una deliciosa salsa de mostaza y miel.',
           img: 'ensalada-pollo.webp',
@@ -332,6 +350,7 @@ export default function Products() {
     },
     {
       title: 'Nuestros fritos',
+      id: 'fritos',
       items: [
         {
           id: 'croquetas',
@@ -361,6 +380,7 @@ export default function Products() {
     },
     {
       title: 'Nuestros postres',
+      id: 'postres',
       items: [
         {
           id: 'arroz-leche',
@@ -382,6 +402,8 @@ export default function Products() {
     },
     {
       title: 'Nuestros encargos especiales',
+      id: 'encargos',
+      link: { to: '/asados-por-encargo', label: 'Más información sobre encargos →' },
       items: [
         {
           id: 'paletilla-aranda',
@@ -454,10 +476,18 @@ export default function Products() {
         <img src={homepage} alt="Carta de comida casera para llevar de Kilo y Cuarto: pollo asado, paellas y asados" />
       </div>
 
+      {/* Índice de anclas: navegación rápida por secciones */}
+      <nav className="products__toc" aria-label="Secciones de la carta">
+        {sections.map((sec) => (
+          <a key={sec.id} href={`#${sec.id}`} className="products__tocLink">
+            {sec.title}
+          </a>
+        ))}
+      </nav>
 
       {/* Secciones */}
       {sections.map((sec) => (
-        <section key={sec.title} className="products__section">
+        <section key={sec.title} id={sec.id} className="products__section">
           <h2 className="products__sectionTitle">{sec.title}</h2>
 
           <div className="products__grid">
@@ -474,6 +504,12 @@ export default function Products() {
               />
             ))}
           </div>
+
+          {sec.link && (
+            <a className="products__sectionLink" href={sec.link.to}>
+              {sec.link.label}
+            </a>
+          )}
         </section>
       ))}
 

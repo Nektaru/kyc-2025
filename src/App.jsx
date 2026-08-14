@@ -14,6 +14,9 @@ import Home from './pages/Home.jsx'
 const Ofertas = lazy(() => import('./pages/Ofertas.jsx'))
 const Resenas = lazy(() => import('./pages/Resenas.jsx'))
 const Products = lazy(() => import('./pages/Products.jsx'))
+const PolloAsado = lazy(() => import('./pages/PolloAsado.jsx'))
+const Paellas = lazy(() => import('./pages/Paellas.jsx'))
+const AsadosPorEncargo = lazy(() => import('./pages/AsadosPorEncargo.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const AvisoLegal = lazy(() => import('./pages/AvisoLegal.jsx'))
@@ -48,6 +51,9 @@ export default function App() {
           <Route path="/ofertas" element={<Ofertas />} />
           <Route path="/resenas" element={<Resenas />} />
           <Route path="/productos" element={<Products />} />
+          <Route path="/pollo-asado-san-fernando-de-henares" element={<PolloAsado />} />
+          <Route path="/paellas-san-fernando-de-henares" element={<Paellas />} />
+          <Route path="/asados-por-encargo" element={<AsadosPorEncargo />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />

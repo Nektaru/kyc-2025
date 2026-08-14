@@ -4,6 +4,92 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* === FRANJA DE INFORMACIÓN LOCAL (tras el Hero) === */
+.homeIntro {
+  width: 100%;
+  background: #fff;
+  padding: 3rem 1.25rem;
+}
+
+.homeIntro__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeIntro__text {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #333;
+  margin: 0 0 1.5rem;
+}
+
+.homeIntro__nap {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  font-size: 0.98rem;
+  color: #444;
+}
+
+.homeIntro__nap a {
+  color: #263d4b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.homeIntro__nap a:hover,
+.homeIntro__nap a:focus-visible {
+  text-decoration: underline;
+}
+
+.homeIntro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.homeIntro__actions .btn {
+  color: #263d4b;
+  border-color: #263d4b;
+}
+
+.homeIntro__actions .btn--primary {
+  color: #222;
+}
+
+.homeIntro__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.homeIntro__links a {
+  color: #b98d00;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.homeIntro__links a:hover,
+.homeIntro__links a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .homeIntro { padding: 2.5rem 1rem; }
+  .homeIntro__text { font-size: 1rem; }
+}
+
 /* === SECCIÓN ZIZZI === */
 .feature--zizzi {
   width: 100%;

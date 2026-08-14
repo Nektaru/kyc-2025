@@ -6,11 +6,11 @@
 }
 
 .footer__top {
-  max-width: 1120px;
+  max-width: 1220px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1.2fr;
-  gap: 3rem;
+  grid-template-columns: 1.5fr 0.9fr 0.9fr 1.1fr;
+  gap: 2.5rem;
   padding-bottom: 3rem;
 }
 
@@ -86,7 +86,7 @@
 
 /* Barra inferior */
 .footer__bottom {
-  max-width: 1120px;
+  max-width: 1220px;
   margin: 0 auto;
   border-top: 1px solid rgba(247, 238, 218, 0.18);
   padding: 1.3rem 0 1.6rem;
@@ -117,6 +117,14 @@
 .footer__legal a:hover,
 .footer__legal a:focus-visible {
   color: #d4ad24;
+}
+
+/* ===== Tablet: 2 columnas ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
 }
 
 /* ===== Móvil ===== */

@@ -21,9 +21,9 @@ const slides = [
   {
   src: pollo2Url,
   srcSet: pollo2Set,
-  alt: 'Los mejores pollos asados de Madrid',
-  h1: 'Los mejores pollos asados de Madrid',
-  p: 'Están en Kilo y Cuarto',
+  alt: 'Pollo asado casero de Kilo y Cuarto en San Fernando de Henares',
+  h1: 'Comida casera para llevar en San Fernando de Henares',
+  p: 'Pollos asados, paellas, menú del día y platos caseros elaborados cada mañana. Cocinando para San Fernando de Henares desde 1994.',
   pos: 'center center',
   size: 'lg',
   ctas: [

@@ -77,7 +77,8 @@ export default function Ofertas() {
         <h2 id="of-menu">Menú del día · de lunes a viernes</h2>
         <p className="ofertas__text">
           De lunes a viernes (no festivos) tenemos menú del día casero y a buen
-          precio. Cada día, su menú.
+          precio, para llevar a casa o a la oficina. Cambia cada día según el
+          cartel: cada día, su menú.
         </p>
 
         {todayMenu ? (
@@ -114,7 +115,8 @@ export default function Ofertas() {
         <p className="ofertas__text">
           Paellas y arroces caseros por encargo: valenciana, de marisco, arroz
           negro y más. Consulta el cartel y haz tu pedido en el{' '}
-          <a href="tel:+34916716618">91 671 66 18</a>.
+          <a href="tel:+34916716618">91 671 66 18</a>. Descubre{' '}
+          <a href="/paellas-san-fernando-de-henares">todas nuestras variedades de paella y arroz</a>.
         </p>
         <figure className="ofertas__figure">
           <button

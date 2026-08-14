@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 
-// Origen dinámico: funciona igual en http o https (tras activar SSL) y en local.
-const getOrigin = () =>
-  typeof window !== 'undefined'
-    ? window.location.origin
-    : 'https://www.elkiloycuarto.es'
+// Origen público fijo: canonical, Open Graph y Twitter deben apuntar SIEMPRE
+// al dominio de producción, tanto en desarrollo como durante el
+// prerenderizado (que se sirve desde http://localhost:PORT). Usar
+// window.location.origin aquí filtraba URLs localhost al HTML final.
+const PROD_ORIGIN = 'https://www.elkiloycuarto.es'
+const getOrigin = () => PROD_ORIGIN
 
 function upsertMeta(attr, key, content) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`)

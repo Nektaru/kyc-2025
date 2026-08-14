@@ -32,11 +32,62 @@ export default function Home() {
   return (
     <main className="home">
       <Seo
-        title="Kilo y Cuarto · Comida para llevar en San Fernando de Henares"
-        description="Comida para llevar en San Fernando de Henares (Madrid): pollo asado, paellas y arroces, croquetas, tortillas y asados por encargo. Cocina casera desde 1994. Haz tu pedido."
+        title="Comida para llevar en San Fernando de Henares | Kilo y Cuarto"
+        description="Comida casera para llevar en San Fernando de Henares: pollo asado, paellas, menú del día y asados por encargo. Abiertos de lunes a domingo."
         path="/"
       />
       <Hero />
+
+      {/* Franja de información local: qué somos, dónde estamos y cómo pedir */}
+      <section className="homeIntro" data-aos="fade-up">
+        <div className="homeIntro__inner">
+          <p className="homeIntro__text">
+            Somos un negocio familiar de comida casera para llevar en San
+            Fernando de Henares: pollos asados, paellas y arroces, menú del
+            día y asados por encargo, elaborados cada mañana. Cocinando para
+            el barrio desde 1994.
+          </p>
+
+          <ul className="homeIntro__nap">
+            <li>
+              <strong>Dónde:</strong>{' '}
+              <a
+                href="https://www.google.com/maps/place/Kilo+y+Cuarto/@40.4288709,-3.5362986,17z"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Calle Toledo 2, San Fernando de Henares (Madrid)
+              </a>
+            </li>
+            <li>
+              <strong>Horario:</strong> lunes a domingo, de 09:30 a 15:30
+            </li>
+            <li>
+              <strong>Teléfono:</strong> <a href="tel:+34916716618">91 671 66 18</a>
+            </li>
+          </ul>
+
+          <div className="homeIntro__actions">
+            <a className="btn btn--primary" href="/productos">Ver la carta</a>
+            <a className="btn" href="tel:+34916716618">Llamar o encargar</a>
+            <a
+              className="btn"
+              href="https://www.google.com/maps?ll=40.428867,-3.533724&z=17&t=m&hl=es&gl=ES&mapclient=embed&cid=9056155371097494273"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cómo llegar
+            </a>
+          </div>
+
+          <nav className="homeIntro__links" aria-label="Nuestras especialidades">
+            <a href="/pollo-asado-san-fernando-de-henares">Pollos asados en San Fernando de Henares</a>
+            <a href="/paellas-san-fernando-de-henares">Paellas y arroces para llevar</a>
+            <a href="/ofertas">Consulta el menú del día</a>
+            <a href="/asados-por-encargo">Asados por encargo</a>
+          </nav>
+        </div>
+      </section>
 
       {/* Sección estilo Zizzi con AOS */}
       <section className="feature feature--zizzi" data-aos="fade-up" data-aos-delay="100">

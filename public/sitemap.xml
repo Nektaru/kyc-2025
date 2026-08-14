@@ -21,6 +21,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.elkiloycuarto.es/pollo-asado-san-fernando-de-henares</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.elkiloycuarto.es/paellas-san-fernando-de-henares</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.elkiloycuarto.es/asados-por-encargo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.elkiloycuarto.es/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
