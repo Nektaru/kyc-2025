@@ -51,7 +51,7 @@ export default function Home() {
           </p>
 
           <ul className="homeIntro__nap">
-            <li>
+            <li className="homeIntro__napFull">
               <strong>Dónde:</strong>{' '}
               <a
                 href="https://www.google.com/maps/place/Kilo+y+Cuarto/@40.4288709,-3.5362986,17z"

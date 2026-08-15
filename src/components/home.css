@@ -54,6 +54,10 @@ body {
   color: #444;
 }
 
+.homeIntro__napFull {
+  flex-basis: 100%;
+}
+
 .homeIntro__nap a {
   color: #263d4b;
   font-weight: 600;

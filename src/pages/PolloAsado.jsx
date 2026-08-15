@@ -23,24 +23,33 @@ export default function PolloAsado() {
 
       <header className="localPage__hero">
         <p className="localPage__eyebrow">Kilo y Cuarto</p>
-        <h1>Pollo asado en San Fernando de Henares</h1>
+        <h1>
+          Pollo asado
+          <br />
+          en San Fernando de Henares
+        </h1>
         <p className="localPage__intro">
           Pollos asados lentamente cada día, con nuestra mezcla de especias de
-          la casa y el jugo que llevamos preparando desde 1994. Listos para
-          recoger en Calle Toledo 2.
+          la casa y el jugo que llevamos preparando desde 1994.
+        </p>
+        <p className="localPage__introSub">
+          Listos para recoger en Calle Toledo 2, frente al parque primero de Mayo.
         </p>
       </header>
 
       <div className="localPage__body">
-        <h2>Un pollo asado como el de casa</h2>
+        <h2>Un pollo asado como el de toda la vida</h2>
         <p>
-          Cocinamos el pollo despacio, a fuego controlado, hasta conseguir una
-          piel dorada y crujiente por fuera y una carne jugosa por dentro. Lo
-          acompañamos con nuestras patatas panadera y el jugo especial que
-          elaboramos con la receta de siempre. Es uno de los platos por los
-          que más nos conocen en el barrio, y también uno de los que más
-          encargos recibe para comidas familiares y reuniones de fin de
-          semana.
+          Asamos el pollo lentamente en nuestro asador, a fuego controlado,
+          hasta conseguir una piel dorada y crujiente por fuera y una carne
+          jugosa por dentro. Lo acompañamos con nuestra salsa especial que
+          elaboramos con la receta de siempre, ¡y que es un vicio para mojar
+          pan! Mantenemos la receta desde 1993 y somos famosos en el barrio
+          por tener el mejor pollo de la zona. Y lo mejor es, ¡que no hace
+          falta encargarlos! Te aseguramos pollos recién asados todos los
+          días de 11:00 que sale la primera barra hasta las 15:00 que
+          empezamos a limpiar el asador. Perfecto para comidas familiares y
+          reuniones de fin de semana.
         </p>
 
         <figure className="localPage__figure localPage__figure--gif">
@@ -57,7 +66,7 @@ export default function PolloAsado() {
         <h2>Complementos y ofertas</h2>
         <p>
           Además del pollo solo, tenemos ofertas con complementos (patatas,
-          ensaladilla, aros de cebolla y más) pensadas para compartir. Puedes
+          ensaladilla, croquetas y más) pensadas para compartir. Puedes
           consultar la oferta vigente en nuestra página de{' '}
           <a href="/ofertas">ofertas y menú del día</a>.
         </p>
@@ -73,13 +82,15 @@ export default function PolloAsado() {
           />
         </figure>
 
-        <h2>Cómo recoger tu pedido</h2>
+        <h2>Ven a por tu pollo y olvídate de cocinar</h2>
         <p>
-          Puedes llamarnos con antelación para reservar tu pollo asado y
-          recogerlo cuando te venga bien dentro de nuestro horario, o pasarte
-          directamente por el local en Calle Toledo 2. En días de mucha
-          demanda (fines de semana y festivos) recomendamos encargar con
-          tiempo para asegurar la hora de recogida.
+          ¡Puedes venir a por tu pollo sin necesidad de reservarlo! Sólo
+          recomendamos llamar para reservarlo si vas a venir más tarde de las
+          15:00 (cerramos a las 15:30) y es la única franja horaria que no
+          aseguramos 100% tener pollos. En días de mucha demanda (fines de
+          semana y festivos) verás que se forman grandes filas fuera de la
+          tienda, pero no te preocupes que tenemos pollos y patatas para
+          todos.
         </p>
 
         <section className="localPage__info">
