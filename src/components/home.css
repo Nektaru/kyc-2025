@@ -12,16 +12,34 @@ body {
 }
 
 .homeIntro__inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
   text-align: center;
 }
 
+.homeIntro__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+.homeIntro__inner h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
 .homeIntro__text {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: #333;
-  margin: 0 0 1.5rem;
+  margin: 0 auto 1.75rem;
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
 }
 
 .homeIntro__nap {
@@ -87,7 +105,8 @@ body {
 
 @media (max-width: 600px) {
   .homeIntro { padding: 2.5rem 1rem; }
-  .homeIntro__text { font-size: 1rem; }
+  .homeIntro__eyebrow { font-size: 12px; letter-spacing: 1.5px; }
+  .homeIntro__text { font-size: 16px; }
 }
 
 /* === SECCIÓN ZIZZI === */

@@ -41,6 +41,8 @@ export default function Home() {
       {/* Franja de información local: qué somos, dónde estamos y cómo pedir */}
       <section className="homeIntro" data-aos="fade-up">
         <div className="homeIntro__inner">
+          <p className="homeIntro__eyebrow">Kilo y Cuarto</p>
+          <h2>Comida casera para llevar, aquí al lado</h2>
           <p className="homeIntro__text">
             Somos un negocio familiar de comida casera para llevar en San
             Fernando de Henares: pollos asados, paellas y arroces, menú del

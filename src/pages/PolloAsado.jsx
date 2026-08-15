@@ -2,7 +2,7 @@ import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
 import '../components/localpage.css'
 
-import polloAsado from '../assets/products/pollo-asado.webp'
+import polloAsadoGif from '../assets/pollo-asado.gif'
 import pollosEstrellas from '../assets/ofertas/pollos-y-estrellas.webp'
 
 const BREADCRUMB_ITEMS = [
@@ -43,12 +43,12 @@ export default function PolloAsado() {
           semana.
         </p>
 
-        <figure className="localPage__figure">
+        <figure className="localPage__figure localPage__figure--gif">
           <img
-            src={polloAsado}
-            alt="Pollo asado casero de Kilo y Cuarto con patatas panadera"
-            width="1200"
-            height="800"
+            src={polloAsadoGif}
+            alt="Pollo asado girando en el horno de Kilo y Cuarto"
+            width="320"
+            height="180"
             loading="lazy"
             decoding="async"
           />
