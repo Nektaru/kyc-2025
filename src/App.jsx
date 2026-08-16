@@ -4,6 +4,7 @@ import { isConsentGiven, loadGA, trackPageview } from './analytics'
 import NavBar from './components/NavBar.jsx'
 import Footer from './components/Footer.jsx'
 import ConsentBar from './components/ConsentBar.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollToTopButton from './components/ScrollToTopButton'
 
 // Home se carga de inmediato (es la portada y el elemento LCP).
@@ -44,6 +45,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollToTop />
       <NavBar />
       <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
         <Routes>

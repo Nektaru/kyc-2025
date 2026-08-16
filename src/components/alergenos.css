@@ -40,6 +40,14 @@
   line-height: 1;
 }
 
+/* Icono SVG (sésamo): mismo tamaño óptico que los emojis de al lado */
+.alergenos__svg {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  flex-shrink: 0;
+}
+
 .alergenos__ninguno {
   margin: 0 0 0.85rem;
   font-size: 0.9rem;

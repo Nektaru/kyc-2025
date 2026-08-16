@@ -2,34 +2,27 @@
 // ALÉRGENOS — Reglamento (UE) 1169/2011
 // ============================================================================
 //
-// IMPORTANTE, LEER ANTES DE PUBLICAR:
+// Información revisada en cocina por Kilo y Cuarto.
 //
-// Esta lista es un BORRADOR. Está deducida únicamente de los ingredientes que
-// ya aparecen escritos en la descripción de cada plato en Products.jsx, no de
-// las recetas reales ni de las etiquetas de los proveedores.
+// CÓMO EDITAR:
+//   - Las claves de `alergenosPorPlato` son los `id` de cada producto en
+//     Products.jsx.
+//   - Los valores deben ser claves EXACTAS de ALERGENOS (minúsculas, y
+//     `frutosSecos` en camelCase). Si se escribe una clave que no existe,
+//     `npm run build` falla y avisa: así un error de tecleo nunca puede
+//     ocultar un alérgeno en la web.
+//   - Al añadir un plato nuevo a la carta hay que añadirlo también aquí, o el
+//     build avisará de que falta.
 //
-// La información de alérgenos es de obligado cumplimiento legal y afecta a la
-// salud de quien la lee. Antes de mostrarla en la web hay que revisarla plato
-// por plato en cocina, teniendo en cuenta:
-//   - Ingredientes que no salen en la descripción (rebozados, caldos, salsas,
-//     espesantes, marinados...).
-//   - Lo que digan las etiquetas de los productos comprados ya elaborados
-//     (chorizo, morcilla, bacon, pasta fresca, galletas, salsas...).
-//   - La contaminación cruzada real de la cocina (misma freidora, misma
-//     superficie de trabajo, mismos utensilios).
-//
-// Los platos con `duda` son aquellos en los que la descripción no permite
-// determinar los alérgenos: hay que rellenarlos a mano.
-//
-// CUANDO ESTÉ TODO REVISADO: poner ALERGENOS_REVISADOS = true.
-// Mientras esté en false, la web no muestra ninguna lista: en su lugar invita
-// a preguntar por teléfono o en tienda (que es lo correcto legalmente si no
-// hay información confirmada).
+// Si en algún momento deja de estar revisada, poner ALERGENOS_REVISADOS a
+// false: la web dejará de mostrar listas y volverá a invitar a preguntar por
+// teléfono o en tienda.
 // ============================================================================
 
-export const ALERGENOS_REVISADOS = false
+export const ALERGENOS_REVISADOS = true
 
-// Los 14 alérgenos de declaración obligatoria.
+// Alérgenos de declaración obligatoria que se manejan en la cocina.
+// (No se incluyen los altramuces porque no se usan en ningún plato.)
 export const ALERGENOS = {
   gluten: { nombre: 'Gluten', icono: '🌾' },
   crustaceos: { nombre: 'Crustáceos', icono: '🦐' },
@@ -41,57 +34,34 @@ export const ALERGENOS = {
   frutosSecos: { nombre: 'Frutos de cáscara', icono: '🌰' },
   apio: { nombre: 'Apio', icono: '🌿' },
   mostaza: { nombre: 'Mostaza', icono: '🌭' },
-  sesamo: { nombre: 'Sésamo', icono: '🫓' },
+  // El sésamo no tiene emoji propio, así que usa un icono SVG dibujado a
+  // medida (ver Alergenos.jsx). Evitamos descargar iconos de terceros porque
+  // los pictogramas de alérgenos suelen tener licencia.
+  sesamo: { nombre: 'Sésamo', svgId: 'sesamo' },
   sulfitos: { nombre: 'Sulfitos', icono: '🍷' },
-  altramuces: { nombre: 'Altramuces', icono: '🫛' },
   moluscos: { nombre: 'Moluscos', icono: '🦑' },
 }
 
-// Borrador por plato. La clave es el `id` del producto en Products.jsx.
 export const alergenosPorPlato = {
   // ---- Nuestros asados ----
-  'pollo-asado': {
-    alergenos: [],
-    duda: 'Confirmar la composición de la salsa especial de la casa y de la mezcla de especias.',
-  },
-  'costillas-bbq': {
-    alergenos: [],
-    duda: 'Las salsas barbacoa suelen llevar gluten, mostaza, soja o sulfitos. Revisar la receta o la etiqueta.',
-  },
+  'pollo-asado': { alergenos: ['soja'] },
+  'costillas-bbq': { alergenos: ['soja', 'sulfitos'] },
 
   // ---- Nuestros acompañantes ----
   rusa: { alergenos: ['huevo', 'pescado'] },
   panaderas: { alergenos: [] },
-  migas: {
-    alergenos: ['gluten'],
-    duda: 'Revisar la etiqueta del chorizo y de la tocineta (pueden llevar sulfitos, soja o lactosa).',
-  },
+  migas: { alergenos: ['gluten'] },
   'huevos-rellenos': { alergenos: ['huevo', 'pescado'] },
   'pisto-manchego': { alergenos: ['huevo'] },
 
   // ---- Nuestras carnes ----
-  albondigas: {
-    alergenos: [],
-    duda: 'Las albóndigas suelen llevar pan rallado (gluten) y huevo, y la salsa puede llevar harina o vino. Confirmar.',
-  },
-  rusos: {
-    alergenos: [],
-    duda: 'Confirmar si llevan pan rallado o huevo, y qué es el "ingrediente secreto".',
-  },
-  'filete-pollo': {
-    alergenos: ['gluten', 'huevo'],
-    duda: 'Confirmado por el empanado; revisar si el pan rallado lleva además sésamo o soja.',
-  },
+  albondigas: { alergenos: ['gluten'] },
+  rusos: { alergenos: ['gluten', 'huevo'] },
+  'filete-pollo': { alergenos: ['gluten', 'huevo'] },
   'pechuga-villaroy': { alergenos: ['gluten', 'huevo', 'lacteos'] },
   'pollo-ajillo': { alergenos: [] },
-  'berenjena-rellena': {
-    alergenos: ['lacteos'],
-    duda: 'Confirmar si la carne picada lleva pan rallado (gluten) y si hay bechamel.',
-  },
-  'rabo-de-toro': {
-    alergenos: ['sulfitos'],
-    duda: 'Sulfitos por el vino. Confirmar si la salsa se liga con harina (gluten).',
-  },
+  'berenjena-rellena': { alergenos: ['lacteos'] },
+  'rabo-de-toro': { alergenos: ['sulfitos', 'gluten'] },
 
   // ---- Nuestros pescados ----
   'merluza-brocoli': { alergenos: ['pescado', 'lacteos', 'crustaceos'] },
@@ -99,110 +69,72 @@ export const alergenosPorPlato = {
   'pim-rell': { alergenos: ['pescado', 'lacteos', 'gluten'] },
 
   // ---- Paellas y arroces ----
-  'paella-valenciana': {
-    alergenos: [],
-    duda: 'Confirmar el caldo (puede llevar apio, pescado o sulfitos) y si lleva marisco.',
-  },
+  'paella-valenciana': { alergenos: [] },
   'paella-pulpo-gambones': { alergenos: ['moluscos', 'crustaceos'] },
-  'arroz-negro': {
-    alergenos: ['moluscos'],
-    duda: 'Confirmar si además lleva crustáceos o pescado en el caldo.',
-  },
-  'arroz-hindu': {
-    alergenos: [],
-    duda: 'Las salsas curry pueden llevar lácteos, frutos secos, mostaza o apio. Confirmar.',
-  },
-  'risotto-funghi': {
-    alergenos: [],
-    duda: 'El risotto suele llevar mantequilla y/o parmesano (lácteos) y caldo. Confirmar.',
-  },
+  'arroz-negro': { alergenos: ['moluscos'] },
+  'arroz-hindu': { alergenos: ['lacteos', 'frutosSecos'] },
+  'risotto-funghi': { alergenos: ['lacteos'] },
 
   // ---- Nuestras pastas ----
   'tallarines-verduras': { alergenos: ['gluten', 'soja'] },
   'macarrones-chorizo': { alergenos: ['gluten', 'lacteos'] },
-  'ravioli-3-formaggi': {
-    alergenos: ['gluten', 'lacteos'],
-    duda: 'La pasta fresca rellena suele llevar huevo. Confirmar en la etiqueta.',
-  },
-  'tagliatelle-marinara': {
-    alergenos: ['gluten', 'moluscos', 'crustaceos'],
-    duda: 'Confirmar si la pasta lleva huevo.',
-  },
-  'tortellini-ricotta-espinacas': {
-    alergenos: ['gluten', 'lacteos'],
-    duda: 'Confirmar si la pasta lleva huevo.',
-  },
+  'ravioli-3-formaggi': { alergenos: ['gluten', 'lacteos', 'huevo'] },
+  'tagliatelle-marinara': { alergenos: ['gluten', 'moluscos', 'crustaceos'] },
+  'tortellini-ricotta-espinacas': { alergenos: ['gluten', 'lacteos', 'huevo'] },
 
   // ---- Nuestros tortillones ----
   'tortilla-patata': { alergenos: ['huevo'] },
   'tortilla-calabacin': { alergenos: ['huevo'] },
-  'tortilla-chorizo': {
-    alergenos: ['huevo'],
-    duda: 'Revisar la etiqueta del chorizo de Potes.',
-  },
-  'tortilla-morcilla': {
-    alergenos: ['huevo'],
-    duda: 'La morcilla de Burgos puede llevar gluten. Revisar la etiqueta.',
-  },
+  'tortilla-chorizo': { alergenos: ['huevo'] },
+  'tortilla-morcilla': { alergenos: ['huevo'] },
   'tortilla-queso-cabra': { alergenos: ['huevo', 'lacteos'] },
 
   // ---- Nuestras ensaladas ----
   'ensalada-cabra': { alergenos: ['lacteos', 'frutosSecos', 'sulfitos'] },
-  'ensalada-cesar': {
-    alergenos: ['gluten', 'lacteos', 'huevo', 'pescado'],
-    duda: 'Pescado por las anchoas de la salsa césar y gluten por picatostes y empanado. Confirmar si la salsa lleva además mostaza.',
-  },
+  'ensalada-cesar': { alergenos: ['gluten', 'lacteos', 'huevo'] },
   'ensalada-pollo': { alergenos: ['mostaza'] },
 
   // ---- Nuestros fritos ----
-  croquetas: {
-    alergenos: ['gluten', 'lacteos', 'huevo'],
-    duda: 'Añadir "pescado" en la variedad de bacalao. Ojo también a la freidora compartida.',
-  },
+  croquetas: { alergenos: ['gluten', 'lacteos', 'huevo'] },
   'aros-cebolla': { alergenos: ['gluten'] },
-  'patatas-fritas': {
-    alergenos: [],
-    duda: 'Si se fríen en el mismo aceite que rebozados, hay contaminación cruzada con gluten.',
-  },
+  'patatas-fritas': { alergenos: ['gluten'] },
 
   // ---- Nuestros postres ----
   'arroz-leche': { alergenos: ['lacteos'] },
   natillas: { alergenos: ['lacteos', 'huevo', 'gluten'] },
 
   // ---- Encargos especiales ----
-  'paletilla-aranda': {
-    alergenos: [],
-    duda: 'Confirmar si la salsa del asado se liga con harina o lleva vino.',
-  },
-  'paletilla-cochinillo': {
-    alergenos: [],
-    duda: 'Confirmar si la salsa del asado se liga con harina o lleva vino.',
-  },
-  cochinillo: {
-    alergenos: [],
-    duda: 'Confirmar si la salsa del asado se liga con harina o lleva vino.',
-  },
-  capon: {
-    alergenos: ['frutosSecos'],
-    duda: 'Confirmar si el relleno lleva pan rallado (gluten), huevo o sulfitos.',
-  },
-  'mejillones-vinagreta': {
-    alergenos: ['moluscos'],
-    duda: 'El vinagre puede aportar sulfitos. Confirmar.',
-  },
-  'salpicon-marisco': {
-    alergenos: ['crustaceos', 'moluscos'],
-    duda: 'El aliño puede llevar sulfitos o mostaza. Confirmar.',
-  },
+  'paletilla-aranda': { alergenos: [] },
+  'paletilla-cochinillo': { alergenos: [] },
+  cochinillo: { alergenos: [] },
+  capon: { alergenos: ['frutosSecos'] },
+  'mejillones-vinagreta': { alergenos: ['moluscos', 'sulfitos'] },
+  'salpicon-marisco': { alergenos: ['crustaceos', 'moluscos'] },
 }
 
 /**
- * Devuelve los alérgenos confirmados de un plato, o null si todavía no se ha
- * revisado la información (en ese caso la web invita a preguntar).
+ * Devuelve los alérgenos de un plato, o null si la información todavía no
+ * está revisada (en ese caso la web invita a preguntar).
+ *
+ * Si una clave no existe se avisa por consola en lugar de descartarla en
+ * silencio: ocultar un alérgeno sin avisar sería el peor fallo posible aquí.
+ * El script scripts/check-alergenos.mjs impide además que eso llegue a
+ * publicarse, porque hace fallar el build.
  */
 export function getAlergenos(id) {
   if (!ALERGENOS_REVISADOS) return null
   const entrada = alergenosPorPlato[id]
   if (!entrada) return null
-  return entrada.alergenos.map((clave) => ALERGENOS[clave]).filter(Boolean)
+
+  return entrada.alergenos.map((clave) => {
+    const alergeno = ALERGENOS[clave]
+    if (!alergeno) {
+      console.error(
+        `[alergenos] El plato "${id}" declara "${clave}", que no existe en ALERGENOS. Revisa src/data/alergenos.js.`
+      )
+      // Se muestra la clave tal cual antes que no mostrar nada.
+      return { nombre: String(clave), icono: '⚠️' }
+    }
+    return alergeno
+  })
 }

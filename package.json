@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs",
+    "build": "node scripts/check-alergenos.mjs && vite build && node scripts/prerender.mjs",
+    "check-alergenos": "node scripts/check-alergenos.mjs",
     "build:nossg": "vite build",
     "prerender": "node scripts/prerender.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
