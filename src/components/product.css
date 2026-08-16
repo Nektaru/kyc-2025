@@ -167,17 +167,28 @@ body {
   color: white;
 }
 
+/* El modal de producto cabe entero en pantalla, sin scroll vertical.
+   (No afecta al zoom a pantalla completa de Ofertas, que tiene sus propias
+   reglas con :has(.ofertas__modalImg) en ofertas.css.) */
+.modal__content:has(.productModal) {
+  width: min(720px, 92vw);
+}
+
 .productModal img {
   width: 100%;
   height: auto;
+  /* Tope de altura para que la foto no empuje el texto fuera de la pantalla
+     en portátiles con poca altura. */
+  max-height: 40vh;
+  object-fit: cover;
   display: block;
 }
 .productModal__content {
-  padding: 1rem 1.2rem 1.4rem;
+  padding: 0.9rem 1.1rem 1.2rem;
 }
 .productModal__content h3 {
   margin: 0 0 .5rem;
-  font-size: 22px;
+  font-size: 21px;
 }
 .productModal__content p {
   margin: 0;

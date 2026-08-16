@@ -12,7 +12,11 @@ import { useLocation } from 'react-router-dom'
  * no romper los enlaces del tipo /productos#paellas-arroces.
  */
 export default function ScrollToTop() {
-  const { pathname, hash } = useLocation()
+  // `key` cambia en CADA navegación, incluso al pulsar un enlace que apunta a
+  // la página en la que ya estás (por ejemplo "Nuestros productos" en el pie
+  // estando en /productos). Sin él, la ruta no cambia, el efecto no se vuelve
+  // a ejecutar y te quedas donde estabas: en el pie de página.
+  const { pathname, hash, key } = useLocation()
 
   useEffect(() => {
     // Evita que el navegador restaure la posición anterior al recargar o al
@@ -33,24 +37,30 @@ export default function ScrollToTop() {
       // reajustamos un poco más por si las imágenes al cargar desplazan el
       // contenido.
       let cancelado = false
-      const limite = Date.now() + 5000
-      let encontradaEn = 0
+      const limite = Date.now() + 6000
+      let estables = 0
 
       const ajustar = () => {
         if (cancelado) return
         const destino = document.querySelector(hash)
 
-        if (destino) {
-          destino.scrollIntoView()
-          if (!encontradaEn) encontradaEn = Date.now()
-          // Sigue corrigiendo 1,5 s tras encontrarla, por si el layout cambia.
-          if (Date.now() - encontradaEn < 1500) {
-            setTimeout(ajustar, 150)
-          }
+        if (!destino) {
+          if (Date.now() < limite) requestAnimationFrame(ajustar)
           return
         }
 
-        if (Date.now() < limite) requestAnimationFrame(ajustar)
+        // Las imágenes de la página van cargando y desplazan el contenido, así
+        // que no basta con saltar una vez: seguimos corrigiendo hasta que la
+        // sección se queda quieta en su sitio varias comprobaciones seguidas.
+        const antes = destino.getBoundingClientRect().top
+        destino.scrollIntoView()
+        const despues = destino.getBoundingClientRect().top
+
+        estables = Math.abs(despues - antes) < 2 ? estables + 1 : 0
+
+        if (estables < 4 && Date.now() < limite) {
+          setTimeout(ajustar, 150)
+        }
       }
 
       ajustar()
@@ -60,7 +70,7 @@ export default function ScrollToTop() {
     }
 
     window.scrollTo(0, 0)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
 
   return null
 }
