@@ -1,0 +1,73 @@
+.alergenos {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.alergenos__title {
+  margin: 0 0 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+.alergenos__lista {
+  list-style: none;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.alergenos__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f6f1e4;
+  color: #263d4b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 13px;
+  border-radius: 999px;
+}
+
+.alergenos__icono {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.alergenos__ninguno {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2f7d4f;
+}
+
+.alergenos__consulta {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.alergenos__consulta a {
+  color: #263d4b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.alergenos__consulta a:hover,
+.alergenos__consulta a:focus-visible {
+  text-decoration: underline;
+}
+
+.alergenos__aviso {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #777;
+}

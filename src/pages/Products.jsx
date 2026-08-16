@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../components/product.css'
 import ProductCard from '../components/ProductCard'
 import Modal from '../components/Modal'
+import Alergenos from '../components/Alergenos'
 import Seo from '../components/Seo'
 import { trackEvent } from '../analytics'
 import homepage from '../assets/products/homepage.webp'
@@ -524,6 +525,11 @@ export default function Products() {
             <div className="productModal__content">
               <h3>{modalItem.title}</h3>
               <p>{modalItem.long || modalItem.short}</p>
+
+              <section className="alergenos" aria-label={`Alérgenos de ${modalItem.title}`}>
+                <h4 className="alergenos__title">Alérgenos</h4>
+                <Alergenos id={modalItem.id} />
+              </section>
             </div>
           </div>
         )}

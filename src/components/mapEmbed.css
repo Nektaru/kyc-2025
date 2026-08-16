@@ -45,3 +45,15 @@
   background: #fef9ec;
   color: #263d4b;
 }
+
+/* ===== Móvil: la tarjeta del mapa ocupa menos alto ===== */
+@media (max-width: 768px) {
+  .mapFacade {
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .mapFacade__pin {
+    font-size: 2rem;
+  }
+}
