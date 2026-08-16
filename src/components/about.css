@@ -102,23 +102,34 @@ body {
   .about__inner {
     grid-template-columns: 1fr;
     min-height: auto;
+    /* El clamp original tenía el máximo por debajo del mínimo, así que
+       devolvía siempre 60px de hueco entre imagen y texto. */
+    gap: 0;
+    padding: 24px 16px 36px;
   }
 
   /* Orden natural en móvil: imagen arriba, texto debajo */
   .about__section.is-reversed .about__media { order: 0; }
   .about__section.is-reversed .about__copy  { order: 0; }
 
+  /* La altura fija en vh dejaba una caja casi cuadrada para una foto
+     apaisada: object-fit: cover recortaba los lados y ampliaba mucho.
+     Con la proporción real de las fotos (3:2) se ven enteras y sin zoom.
+     El padding inferior de 5rem era el que abría el hueco con el texto. */
   .about__media {
-    height: 52vh;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    padding: 0;
     border-radius: 12px;
   }
 
   .about__copy {
     height: auto;
-    padding-block: 16px 28px;
+    padding-block: 20px 0;
   }
 
   .about__copyInner {
     max-width: 720px;
+    padding-inline: 4px;
   }
 }
