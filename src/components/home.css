@@ -580,14 +580,33 @@ body {
     align-items: center;
   }
 
+  /* Las fotos son display:block (reset global), así que el text-align:center
+     de la tarjeta no las centraba: se quedaban pegadas a la izquierda y
+     dejaban un hueco a la derecha. */
   .empellon__card img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
+    margin-inline: auto;
     border-radius: 14px;
   }
 }
 
 @media (max-width: 768px) {
+  /* En móvil la franja tenía 6rem de padding y 7rem de hueco entre las dos
+     fotos, lo que dejaba la sección muy desahogada y descuadrada. */
+  .feature--empellon {
+    padding: 3.5rem 1rem;
+  }
+
+  .empellon__cards {
+    gap: 2.5rem;
+  }
+
+  .empellon__caption {
+    margin-top: 1.2rem;
+    font-size: 16px;
+  }
+
   .feature--map {
     height: 240px;
     padding: 0;

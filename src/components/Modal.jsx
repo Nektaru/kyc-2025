@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './product.css'
 
-export default function Modal({ isOpen, onClose, children }) {
+export default function Modal({ isOpen, onClose, children, contentClassName = '' }) {
   // Bloquea el scroll del fondo mientras el modal está abierto (evita la barra
   // de scroll y que la página de detrás se mueva).
   useEffect(() => {
@@ -17,7 +17,10 @@ export default function Modal({ isOpen, onClose, children }) {
 
   return (
     <div className="modal" onClick={onClose} role="dialog" aria-modal="true">
-      <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`modal__content ${contentClassName}`.trim()}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button className="modal__close" onClick={onClose} aria-label="Cerrar">
           ×
         </button>

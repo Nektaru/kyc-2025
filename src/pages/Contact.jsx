@@ -5,6 +5,8 @@ import 'aos/dist/aos.css'
 import '../components/contact.css'
 import Seo from '../components/Seo'
 import MapEmbed from '../components/MapEmbed'
+import { WHATSAPP_URL, WHATSAPP_NUMERO } from '../components/WhatsAppButton'
+import { trackEvent } from '../analytics'
 
 export default function Contact() {
   useEffect(() => {
@@ -45,6 +47,17 @@ export default function Contact() {
               <li>
                 <strong>Teléfono:</strong>{' '}
                 <a href="tel:+34916716618">91 671 66 18</a>
+              </li>
+              <li>
+                <strong>WhatsApp:</strong>{' '}
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent('click_whatsapp', { origen: 'contacto' })}
+                >
+                  {WHATSAPP_NUMERO}
+                </a>
               </li>
               <li>
                 <strong>Email:</strong>{' '}

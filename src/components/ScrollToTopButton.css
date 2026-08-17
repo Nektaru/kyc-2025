@@ -1,6 +1,7 @@
+/* Centrado abajo: la esquina derecha la ocupa ahora el botón de WhatsApp. */
 .scrollToTopButton {
   position: fixed;
-  right: 24px;
+  left: 50%;
   bottom: 24px;
   width: 48px;
   height: 48px;
@@ -14,7 +15,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(12px);
+  /* El translateX(-50%) va en todos los estados para que no se descentre al
+     aparecer ni al pasar el ratón. */
+  transform: translate(-50%, 12px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   z-index: 9999;
 }
@@ -22,19 +25,25 @@
 .scrollToTopButton.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
-.scrollToTopButton:hover {
-  transform: translateY(-2px);
+.scrollToTopButton:hover,
+.scrollToTopButton:focus-visible {
+  transform: translate(-50%, -2px);
 }
 
 @media (max-width: 768px) {
   .scrollToTopButton {
-    right: 16px;
-    bottom: 16px;
+    bottom: 14px;
     width: 44px;
     height: 44px;
     font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollToTopButton {
+    transition: opacity 0.25s ease, visibility 0.25s ease;
   }
 }

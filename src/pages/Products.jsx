@@ -15,6 +15,11 @@ const images = import.meta.glob('../assets/products/\u002a.{webp,jpg,jpeg,png,sv
 
 export default function Products() {
   const [modalItem, setModalItem] = useState(null)
+  // Proporción real de la foto abierta. Las fotos casi cuadradas dejarían
+  // mucho margen a los lados en un modal ancho, así que a esas se les da un
+  // modal más estrecho en lugar de recortarlas.
+  const [imgRatio, setImgRatio] = useState(null)
+  const esCuadrada = imgRatio !== null && imgRatio < 1.2
 
 
   // === Datos de ejemplo (ajústalos a tu contenido real) ===
@@ -29,7 +34,7 @@ export default function Products() {
           title: 'Pollo asado',
           short: 'Pollo de corral, patatas panadera y nuestro jugo especial...',
           long:
-            'Pollo asado lentamente con mezcla de especias de la casa, sal, pimienta y nuestra salsa especial elaborada durante 32 años. Ideal para compartir.',
+            'Pollo asado lentamente con mezcla de especias de la casa, sal, pimienta y nuestra salsa especial, con la misma receta desde 1994. Ideal para compartir.',
           img: 'pollo-asado.webp',
         },
         {
@@ -499,6 +504,7 @@ export default function Products() {
                 text={item.short}
                 imgSrc={images[`../assets/products/${item.img}`]}
                 onOpen={() => {
+                  setImgRatio(null)
                   setModalItem(item)
                   trackEvent('ver_producto', { producto: item.title })
                 }}
@@ -515,13 +521,22 @@ export default function Products() {
       ))}
 
       {/* Modal */}
-      <Modal isOpen={!!modalItem} onClose={() => setModalItem(null)}>
+      <Modal
+        isOpen={!!modalItem}
+        onClose={() => setModalItem(null)}
+        contentClassName={esCuadrada ? 'modal__content--fotoCuadrada' : ''}
+      >
         {modalItem && (
           <div className="productModal">
-            <img
-              src={images[`../assets/products/${modalItem.img}`]}
-              alt={modalItem.title}
-            />
+            <div className="productModal__media">
+              <img
+                src={images[`../assets/products/${modalItem.img}`]}
+                alt={modalItem.title}
+                onLoad={(e) =>
+                  setImgRatio(e.currentTarget.naturalWidth / e.currentTarget.naturalHeight)
+                }
+              />
+            </div>
             <div className="productModal__content">
               <h3>{modalItem.title}</h3>
               <p>{modalItem.long || modalItem.short}</p>

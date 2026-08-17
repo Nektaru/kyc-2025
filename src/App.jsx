@@ -6,6 +6,7 @@ import Footer from './components/Footer.jsx'
 import ConsentBar from './components/ConsentBar.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollToTopButton from './components/ScrollToTopButton'
+import WhatsAppButton from './components/WhatsAppButton.jsx'
 
 // Home se carga de inmediato (es la portada y el elemento LCP).
 import Home from './pages/Home.jsx'
@@ -65,6 +66,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <ScrollToTopButton />
+      <WhatsAppButton />
       <Footer />
       <ConsentBar />
     </>

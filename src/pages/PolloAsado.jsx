@@ -44,7 +44,7 @@ export default function PolloAsado() {
           hasta conseguir una piel dorada y crujiente por fuera y una carne
           jugosa por dentro. Lo acompañamos con nuestra salsa especial que
           elaboramos con la receta de siempre, ¡y que es un vicio para mojar
-          pan! Mantenemos la receta desde 1993 y somos famosos en el barrio
+          pan! Mantenemos la receta desde 1994 y somos famosos en el barrio
           por tener el mejor pollo de la zona. Y lo mejor es, ¡que no hace
           falta encargarlos! Te aseguramos pollos recién asados todos los
           días de 11:00 que sale la primera barra hasta las 15:00 que

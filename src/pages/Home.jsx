@@ -97,7 +97,7 @@ export default function Home() {
           <div className="feature__zizzi-text" data-aos="fade-up" data-aos-delay="200">
             <h2>Cocinamos como tu abuela</h2>
             <p>
-              Desde hace 31 años compartimos mesa contigo con la misma ilusión de siempre. Cada plato que servimos está elaborado con el cariño y la dedicación de una comida hecha en casa.<br />
+              Desde 1994 compartimos mesa contigo con la misma ilusión de siempre. Cada plato que servimos está elaborado con el cariño y la dedicación de una comida hecha en casa.<br />
               <br />
               Sabores auténticos, producto fresco y mucho por disfrutar.
             </p>
