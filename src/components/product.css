@@ -171,17 +171,28 @@ body {
    (No afecta al zoom a pantalla completa de Ofertas, que tiene sus propias
    reglas con :has(.ofertas__modalImg) en ofertas.css.) */
 .modal__content:has(.productModal) {
-  width: min(720px, 92vw);
+  width: min(520px, 92vw);
 }
 
 .productModal img {
-  width: 100%;
-  height: auto;
-  /* Tope de altura para que la foto no empuje el texto fuera de la pantalla
-     en portátiles con poca altura. */
-  max-height: 40vh;
-  object-fit: cover;
+  /* La foto se muestra entera y se reduce de tamaño si hace falta: nunca se
+     recorta. Por eso lleva width/height automáticos y un tope de altura en vh,
+     para que en pantallas bajas encoja en lugar de empujar el texto fuera. */
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 38vh;
+  margin: 0 auto;
+}
+
+/* En pantallas bajas (portátiles de 600-700 px de alto) la foto encoge un poco
+   más para dejar sitio a la descripción y los alérgenos, en lugar de recortarse
+   o de sacar barra de scroll. */
+@media (min-width: 621px) and (max-height: 700px) {
+  .productModal img {
+    max-height: 29vh;
+  }
 }
 .productModal__content {
   padding: 0.9rem 1.1rem 1.2rem;
