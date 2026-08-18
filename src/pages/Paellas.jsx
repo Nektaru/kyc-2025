@@ -1,5 +1,6 @@
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
+import JsonLd from '../components/JsonLd'
 import '../components/localpage.css'
 
 import paellaValenciana from '../assets/products/paella-valenciana.webp'
@@ -12,6 +13,42 @@ const BREADCRUMB_ITEMS = [
   { label: 'Paellas y arroces', to: '/paellas-san-fernando-de-henares' },
 ]
 
+const VARIEDADES = [
+  ['Paella mixta', 'Paella de carne y marisco, la más pedida para grupos.'],
+  ['Paella valenciana', 'Receta tradicional con pollo y verduras.'],
+  ['Arroz a banda', 'Arroz de pescado, sabroso y untuoso.'],
+  ['Arroz negro', 'Con tinta de calamar y un sabor intenso a mar.'],
+  ['Arroz con bogavante', 'Para ocasiones especiales.'],
+  ['Paella de pulpo y gambones', 'Una de nuestras combinaciones más pedidas.'],
+  [
+    'Arroz de secreto ibérico con setas y trigueros',
+    'Nuestra versión más de cuchara, con secreto ibérico, setas y espárragos trigueros.',
+  ],
+]
+
+// Carta de arroces en datos estructurados: ayuda a que Google entienda que
+// esto es una carta de paellas de un negocio de San Fernando de Henares y no
+// una página cualquiera que habla de paellas.
+const MENU_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Menu',
+  '@id': 'https://www.elkiloycuarto.es/paellas-san-fernando-de-henares#carta',
+  name: 'Paellas y arroces para llevar',
+  inLanguage: 'es',
+  provider: { '@id': 'https://www.elkiloycuarto.es/#restaurant' },
+  hasMenuSection: {
+    '@type': 'MenuSection',
+    name: 'Paellas y arroces',
+    description:
+      'Paellas y arroces caseros por encargo en San Fernando de Henares. La disponibilidad varía según el día.',
+    hasMenuItem: VARIEDADES.map(([name, description]) => ({
+      '@type': 'MenuItem',
+      name,
+      description,
+    })),
+  },
+}
+
 export default function Paellas() {
   return (
     <main className="localPage">
@@ -20,6 +57,8 @@ export default function Paellas() {
         description="Paellas y arroces caseros por encargo en San Fernando de Henares: valenciana, de pulpo y gambones, arroz negro y más. Consulta disponibilidad al 91 671 66 18."
         path="/paellas-san-fernando-de-henares"
       />
+
+      <JsonLd id="paellas-menu-jsonld" data={MENU_JSONLD} />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
@@ -41,13 +80,11 @@ export default function Paellas() {
           se encuentran:
         </p>
         <ul>
-          <li><strong>Paella mixta</strong> — carne y marisco, la más pedida para grupos.</li>
-          <li><strong>Paella valenciana</strong> — receta tradicional con pollo y verduras.</li>
-          <li><strong>Arroz a banda</strong> — arroz de pescado, sabroso y untuoso.</li>
-          <li><strong>Arroz negro</strong> — con tinta de calamar y un sabor intenso a mar.</li>
-          <li><strong>Arroz con bogavante</strong> — para ocasiones especiales.</li>
-          <li><strong>Paella de pulpo y gambones</strong> — una de nuestras combinaciones más pedidas.</li>
-          <li><strong>Arroz de secreto ibérico con setas y trigueros</strong> — nuestra versión más de cuchara.</li>
+          {VARIEDADES.map(([nombre, descripcion]) => (
+            <li key={nombre}>
+              <strong>{nombre}</strong> — {descripcion.charAt(0).toLowerCase() + descripcion.slice(1)}
+            </li>
+          ))}
         </ul>
         <p>
           La disponibilidad de cada variedad puede variar según el día y la
