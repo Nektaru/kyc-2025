@@ -116,7 +116,9 @@ export default function Ofertas() {
           Paellas y arroces caseros por encargo: valenciana, de marisco, arroz
           negro y más. Consulta el cartel y haz tu pedido en el{' '}
           <a href="tel:+34916716618">91 671 66 18</a>. Descubre{' '}
-          <a href="/paellas-san-fernando-de-henares">todas nuestras variedades de paella y arroz</a>.
+          <a href="/paellas-san-fernando-de-henares">todas nuestras variedades de paella y arroz</a>,
+          con tamaños y precios. Si vienes desde Coslada, aquí tienes la{' '}
+          <a href="/paellas-coslada">información de recogida para tu zona</a>.
         </p>
         <figure className="ofertas__figure">
           <button

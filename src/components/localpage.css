@@ -78,6 +78,28 @@
   line-height: 1.7;
 }
 
+/* Subapartados dentro del cuerpo (h3) */
+.localPage__sub {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #263d4b;
+  margin: 1.8rem 0 0.6rem;
+}
+
+/* Mapa embebido dentro de una página local */
+.localPage__mapa {
+  margin: 1.5rem 0 2rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  min-height: 260px;
+}
+
+/* Botones fuera del recuadro crema */
+.localPage__actions--sueltas {
+  margin-bottom: 2rem;
+}
+
 .localPage__figure {
   margin: 1.5rem 0 2rem;
 }

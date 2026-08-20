@@ -19,6 +19,9 @@ const Products = lazy(() => import('./pages/Products.jsx'))
 const PolloAsado = lazy(() => import('./pages/PolloAsado.jsx'))
 const Paellas = lazy(() => import('./pages/Paellas.jsx'))
 const AsadosPorEncargo = lazy(() => import('./pages/AsadosPorEncargo.jsx'))
+const PollosAsadosCoslada = lazy(() => import('./pages/PollosAsadosCoslada.jsx'))
+const ComidaParaLlevarCoslada = lazy(() => import('./pages/ComidaParaLlevarCoslada.jsx'))
+const PaellasCoslada = lazy(() => import('./pages/PaellasCoslada.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const AvisoLegal = lazy(() => import('./pages/AvisoLegal.jsx'))
@@ -57,6 +60,9 @@ export default function App() {
           <Route path="/pollo-asado-san-fernando-de-henares" element={<PolloAsado />} />
           <Route path="/paellas-san-fernando-de-henares" element={<Paellas />} />
           <Route path="/asados-por-encargo" element={<AsadosPorEncargo />} />
+          <Route path="/pollos-asados-coslada" element={<PollosAsadosCoslada />} />
+          <Route path="/comida-para-llevar-coslada" element={<ComidaParaLlevarCoslada />} />
+          <Route path="/paellas-coslada" element={<PaellasCoslada />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />

@@ -13,6 +13,55 @@ recomendado en Google Search Console y en el Perfil de Empresa de Google.
       `/pollo-asado-san-fernando-de-henares`, `/paellas-san-fernando-de-henares`,
       `/asados-por-encargo`.
 
+## 1-bis. Ampliación a Coslada (agosto 2026)
+
+Se han creado tres páginas nuevas orientadas a los vecinos de Coslada, más el
+refuerzo de la de paellas de San Fernando. **El local sigue estando solo en
+San Fernando de Henares**: las páginas explican la cercanía, no una segunda
+tienda.
+
+**Antes de desplegar:**
+
+- [ ] Anotar en Search Console la **posición e impresiones actuales** de
+      "pollos asados san fernando" y "comida para llevar san fernando", para
+      poder comparar después y detectar cualquier caída.
+
+**Después de desplegar:**
+
+- [ ] Reenviar el sitemap (tiene 3 URL nuevas).
+- [ ] Inspeccionar y solicitar indexación **solo** de las nuevas:
+  - `/pollos-asados-coslada`
+  - `/comida-para-llevar-coslada`
+  - `/paellas-coslada`
+  - `/paellas-san-fernando-de-henares` (ha cambiado el contenido: precios)
+- [ ] **No** volver a pedir indexación masiva de páginas que no han cambiado:
+      no aporta nada y consume cuota.
+- [ ] Vigilar estas consultas en Rendimiento:
+      `pollos asados coslada`, `comida para llevar coslada`,
+      `paella san fernando de henares`, `paellas san fernando de henares`,
+      `paella coslada`, `paellas coslada`.
+- [ ] Comprobar **qué URL** posiciona Google para cada consulta. Si para una
+      misma consulta aparecen dos URL alternándose, hay canibalización: avisar
+      para ajustar el enfoque de una de las dos.
+- [ ] Confirmar que "pollos asados san fernando" y "comida para llevar san
+      fernando" **no bajan**. Si bajaran, revisar primero los enlaces internos
+      nuevos antes de tocar títulos.
+- [ ] Repetir la comparación a las 4, 8 y 12 semanas.
+
+**Acciones externas para Coslada (no se pueden hacer desde el código):**
+
+- [ ] En el Perfil de Empresa, añadir Coslada como **zona de servicio** si la
+      configuración lo permite. **No cambiar la dirección del establecimiento.**
+- [ ] **No crear una segunda ficha de Google Business en Coslada**: sería una
+      ficha falsa y Google puede penalizar o suspender el perfil.
+- [ ] Subir fotos reales de paellas y pollos a la ficha.
+- [ ] Añadir el enlace de la página de paellas como URL de menú o de producto
+      en la ficha.
+- [ ] Buscar menciones legítimas en medios, asociaciones y directorios de
+      Coslada (mismo nombre, dirección y teléfono que en la web).
+- [ ] Corregir los datos inconsistentes que ya estaban detectados en QDQ,
+      Sanfer es Comercio y OpenStreetMap.
+
 ## 2. Google Search Console
 
 - [ ] Verificar que la propiedad `https://www.elkiloycuarto.es` sigue

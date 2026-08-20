@@ -67,6 +67,22 @@ export default function Contact() {
           </div>
 
           <div className="contact__card">
+            <h3>Junto al límite con Coslada</h3>
+            <p>
+              Estamos en Calle Toledo 2, en San Fernando de Henares, a escasos
+              metros del límite con Coslada. Si vives en Coslada y buscas
+              comida casera, pollos asados o paellas para recoger, puedes
+              comprobar nuestra ubicación en el mapa de abajo y calcular tu
+              ruta.
+            </p>
+            <p>
+              <Link to="/comida-para-llevar-coslada" className="link">
+                Comida para llevar cerca de Coslada
+              </Link>
+            </p>
+          </div>
+
+          <div className="contact__card">
             <h3>Horario</h3>
             <p>Lunes a Domingo: 09:30 – 15:30</p>
             <p>¡Abrimos todos los festivos excepto 25 de Diciembre y 1 de Enero!</p>

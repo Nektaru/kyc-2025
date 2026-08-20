@@ -88,6 +88,15 @@ export default function Home() {
             <a href="/ofertas">Consulta el menú del día</a>
             <a href="/asados-por-encargo">Asados por encargo</a>
           </nav>
+
+          <p className="homeIntro__coslada">
+            ¿Vives en Coslada? Estamos a escasos metros del límite entre los dos
+            municipios:{' '}
+            <a href="/comida-para-llevar-coslada">
+              comida casera para llevar en la zona de Coslada
+            </a>
+            .
+          </p>
         </div>
       </section>
 

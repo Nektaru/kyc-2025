@@ -107,6 +107,25 @@ body {
   text-decoration: underline;
 }
 
+.homeIntro__coslada {
+  margin: 1.5rem auto 0;
+  max-width: 640px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.homeIntro__coslada a {
+  color: #b98d00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.homeIntro__coslada a:hover,
+.homeIntro__coslada a:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .homeIntro { padding: 2.5rem 1rem; }
   .homeIntro__eyebrow { font-size: 12px; letter-spacing: 1.5px; }

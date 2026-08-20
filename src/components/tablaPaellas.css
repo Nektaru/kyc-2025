@@ -1,0 +1,94 @@
+.tablaPaellas {
+  margin: 1.5rem 0 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* La tabla se desplaza dentro de su caja en pantallas estrechas: la página
+   nunca se mueve en horizontal. */
+.tablaPaellas__scroll {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #e7e0cd;
+}
+
+.tablaPaellas table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 460px;
+  background: #fff;
+  text-align: left;
+}
+
+.tablaPaellas thead th {
+  background: #263d4b;
+  color: #fef9ec;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  white-space: nowrap;
+}
+
+.tablaPaellas thead th:not(:first-child),
+.tablaPaellas tbody td {
+  text-align: right;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.tablaPaellas tbody th {
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  color: #263d4b;
+}
+
+.tablaPaellas tbody td {
+  padding: 0.8rem 1rem;
+  color: #333;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.tablaPaellas tbody tr:nth-child(even) th,
+.tablaPaellas tbody tr:nth-child(even) td {
+  background: #fdfaf2;
+}
+
+.tablaPaellas tbody tr + tr th,
+.tablaPaellas tbody tr + tr td {
+  border-top: 1px solid #efe9da;
+}
+
+.tablaPaellas__nombre {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.tablaPaellas__desc {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #6b6b6b;
+  line-height: 1.4;
+  max-width: 42ch;
+  white-space: normal;
+}
+
+.tablaPaellas__nota {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .tablaPaellas thead th,
+  .tablaPaellas tbody th,
+  .tablaPaellas tbody td {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .tablaPaellas__desc {
+    font-size: 0.78rem;
+  }
+}

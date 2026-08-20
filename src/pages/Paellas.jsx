@@ -1,6 +1,8 @@
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
+import TablaPaellas from '../components/TablaPaellas'
+import { menuPaellasJsonLd } from '../data/paellas'
 import '../components/localpage.css'
 
 import paellaValenciana from '../assets/products/paella-valenciana.webp'
@@ -13,48 +15,19 @@ const BREADCRUMB_ITEMS = [
   { label: 'Paellas y arroces', to: '/paellas-san-fernando-de-henares' },
 ]
 
-const VARIEDADES = [
-  ['Paella mixta', 'Paella de carne y marisco, la más pedida para grupos.'],
-  ['Paella valenciana', 'Receta tradicional con pollo y verduras.'],
-  ['Arroz a banda', 'Arroz de pescado, sabroso y untuoso.'],
-  ['Arroz negro', 'Con tinta de calamar y un sabor intenso a mar.'],
-  ['Arroz con bogavante', 'Para ocasiones especiales.'],
-  ['Paella de pulpo y gambones', 'Una de nuestras combinaciones más pedidas.'],
-  [
-    'Arroz de secreto ibérico con setas y trigueros',
-    'Nuestra versión más de cuchara, con secreto ibérico, setas y espárragos trigueros.',
-  ],
-]
-
 // Carta de arroces en datos estructurados: ayuda a que Google entienda que
 // esto es una carta de paellas de un negocio de San Fernando de Henares y no
 // una página cualquiera que habla de paellas.
-const MENU_JSONLD = {
-  '@context': 'https://schema.org',
-  '@type': 'Menu',
-  '@id': 'https://www.elkiloycuarto.es/paellas-san-fernando-de-henares#carta',
-  name: 'Paellas y arroces para llevar',
-  inLanguage: 'es',
-  provider: { '@id': 'https://www.elkiloycuarto.es/#restaurant' },
-  hasMenuSection: {
-    '@type': 'MenuSection',
-    name: 'Paellas y arroces',
-    description:
-      'Paellas y arroces caseros por encargo en San Fernando de Henares. La disponibilidad varía según el día.',
-    hasMenuItem: VARIEDADES.map(([name, description]) => ({
-      '@type': 'MenuItem',
-      name,
-      description,
-    })),
-  },
-}
+const MENU_JSONLD = menuPaellasJsonLd(
+  'https://www.elkiloycuarto.es/paellas-san-fernando-de-henares'
+)
 
 export default function Paellas() {
   return (
     <main className="localPage">
       <Seo
         title="Paellas para llevar en San Fernando de Henares | Kilo y Cuarto"
-        description="Paellas y arroces caseros por encargo en San Fernando de Henares: valenciana, de pulpo y gambones, arroz negro y más. Consulta disponibilidad al 91 671 66 18."
+        description="Paellas y arroces por encargo en San Fernando de Henares: valenciana, mixta, marisco, arroz negro, bogavante y más. Consulta tamaños y precios."
         path="/paellas-san-fernando-de-henares"
       />
 
@@ -64,7 +37,7 @@ export default function Paellas() {
 
       <header className="localPage__hero">
         <p className="localPage__eyebrow">Kilo y Cuarto</p>
-        <h1>Paellas y arroces para llevar en San Fernando de Henares</h1>
+        <h1>Paellas por encargo en San Fernando de Henares</h1>
         <p className="localPage__intro">
           Arroces cocinados como en casa, a fuego lento y con producto
           fresco. Ideales para comidas familiares, celebraciones o cualquier
@@ -73,23 +46,18 @@ export default function Paellas() {
       </header>
 
       <div className="localPage__body">
-        <h2>Nuestras variedades</h2>
+        <h2>Variedades, tamaños y precios</h2>
         <p>
-          Preparamos distintos tipos de paella y arroz según el día y la
-          disponibilidad de producto fresco. Entre las que solemos elaborar
-          se encuentran:
+          Preparamos las paellas y arroces por encargo, en dos tamaños:{' '}
+          <strong>8–9 raciones</strong> y <strong>11–12 raciones</strong>. Estos
+          son los que hacemos habitualmente:
         </p>
-        <ul>
-          {VARIEDADES.map(([nombre, descripcion]) => (
-            <li key={nombre}>
-              <strong>{nombre}</strong> — {descripcion.charAt(0).toLowerCase() + descripcion.slice(1)}
-            </li>
-          ))}
-        </ul>
+
+        <TablaPaellas />
+
         <p>
           La disponibilidad de cada variedad puede variar según el día y la
-          temporada. Te recomendamos consultarnos por teléfono para confirmar
-          qué arroces tenemos disponibles y encargar el tuyo.
+          temporada, así que te recomendamos consultarnos al hacer el encargo.
         </p>
 
         <div className="localPage__gallery">
@@ -143,9 +111,14 @@ export default function Paellas() {
         <h2>Cómo encargar tu paella</h2>
         <p>
           Los arroces se preparan por encargo, así que lo mejor es llamarnos
-          con antelación para indicarnos el tipo de paella, el número de
-          raciones y el día que quieres recogerla. Así te aseguras de que
-          esté lista a la hora que necesitas.
+          con antelación para indicarnos el tipo de paella, el tamaño y el día
+          y la hora a la que quieres recogerla. Así te aseguras de que esté
+          lista cuando pasas a por ella.
+        </p>
+        <p>
+          Las paellas se entregan en su propia paellera, por la que se deja una{' '}
+          <strong>fianza de 20 €</strong> que te devolvemos cuando nos traes la
+          paellera de vuelta.
         </p>
 
         <section className="localPage__info">
@@ -186,6 +159,7 @@ export default function Paellas() {
             <li><a href="/pollo-asado-san-fernando-de-henares">Pollo asado</a></li>
             <li><a href="/asados-por-encargo">Asados por encargo</a></li>
             <li><a href="/ofertas">Menú del día y ofertas</a></li>
+            <li><a href="/paellas-coslada">Paellas para recoger cerca de Coslada</a></li>
           </ul>
         </nav>
       </div>
