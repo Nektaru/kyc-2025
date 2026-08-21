@@ -37,7 +37,9 @@ export default function Paellas() {
 
       <header className="localPage__hero">
         <p className="localPage__eyebrow">Kilo y Cuarto</p>
-        <h1>Paellas por encargo en San Fernando de Henares</h1>
+        {/* H1 original: esta página ya posiciona en la primera página de
+            Google, así que no se toca. */}
+        <h1>Paellas y arroces para llevar en San Fernando de Henares</h1>
         <p className="localPage__intro">
           Arroces cocinados como en casa, a fuego lento y con producto
           fresco. Ideales para comidas familiares, celebraciones o cualquier
