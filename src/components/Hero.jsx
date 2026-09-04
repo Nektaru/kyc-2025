@@ -60,12 +60,12 @@ const slides = [
     srcSet: cateringSet,
     alt: 'Caterings y eventos',
     h1:  'Caterings y eventos',
-    p:   'Cuénta con nosotros para tus momentos más especiales',
+    p:   'Cuenta con nosotros para tus momentos más especiales',
     pos: 'center center',
     size: 'md',
     ctas: [
-      { label: 'Pedir presupuesto', to: '/contacto?tipo=catering', variant: 'primary', internal: true },
-      { label: 'Llamar',            to: 'tel:+34916716618',        variant: 'ghost' },
+      { label: 'Nuestro catering', to: '/catering', variant: 'primary', internal: true },
+      { label: 'Llamar',           to: 'tel:+34916716618', variant: 'ghost' },
     ]
   },
 ]

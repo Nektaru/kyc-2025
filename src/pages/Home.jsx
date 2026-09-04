@@ -22,6 +22,7 @@ import imagen6Set from '../assets/arroz negro.webp?w=450;700;900&format=webp&qua
 import imagen6Url from '../assets/arroz negro.webp?w=900&format=webp&quality=80&as=url'
 import imagen7Set from '../assets/paletilla-cochinillo.webp?w=450;700;900&format=webp&quality=80&as=srcset'
 import imagen7Url from '../assets/paletilla-cochinillo.webp?w=900&format=webp&quality=80&as=url'
+import cateringPortada from '../assets/catering/pagina-1.webp'
 
 
 export default function Home() {
@@ -190,6 +191,42 @@ export default function Home() {
             <a className="btn btn--primary" href="/productos">Ver productos</a>
             <a className="btn btn--ghost-light" href="#mapa">Ven a visitarnos</a>
           </div>
+        </div>
+      </section>
+
+      {/* Catering: acceso al catálogo en PDF */}
+      <section className="homeCatering" data-aos="fade-up">
+        <div className="homeCatering__inner">
+          <div className="homeCatering__texto">
+            <p className="homeCatering__eyebrow">Catering y eventos</p>
+            <h2>¿Organizas una celebración?</h2>
+            <p>
+              Tenemos un catálogo con empanadas, fritos y finger food pensados
+              para reuniones, comuniones, cumpleaños y eventos de empresa.
+              Puedes consultarlo online o descargarlo en PDF.
+            </p>
+            <div className="homeCatering__actions">
+              <a className="btn btn--primary" href="/catering">Ver el catálogo</a>
+              <a
+                className="btn btn--ghost-light"
+                href="/catering-2026-precios.pdf"
+                download
+              >
+                Descargar en PDF
+              </a>
+            </div>
+          </div>
+
+          <a className="homeCatering__portada" href="/catering" aria-label="Ver el catálogo de catering">
+            <img
+              src={cateringPortada}
+              alt="Portada del catálogo de catering 2026 de Kilo y Cuarto"
+              width="1400"
+              height="1980"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
         </div>
       </section>
 

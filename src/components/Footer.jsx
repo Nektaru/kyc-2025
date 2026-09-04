@@ -39,6 +39,7 @@ export default function Footer() {
             <li><Link to="/pollo-asado-san-fernando-de-henares">Pollo asado</Link></li>
             <li><Link to="/paellas-san-fernando-de-henares">Paellas y arroces</Link></li>
             <li><Link to="/asados-por-encargo">Asados por encargo</Link></li>
+            <li><Link to="/catering">Catering para eventos</Link></li>
           </ul>
           <h3 className="footer__subtitle">Vecinos de Coslada</h3>
           <ul>

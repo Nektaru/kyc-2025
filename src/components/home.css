@@ -406,6 +406,105 @@ body {
   color: #555;
 }
 
+/* === CATERING: acceso al catálogo === */
+.homeCatering {
+  width: 100%;
+  background: #263d4b;
+  padding: 4.5rem 1.25rem;
+}
+
+.homeCatering__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.homeCatering__eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+.homeCatering__texto h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.15;
+  color: #fff;
+  font-weight: 800;
+}
+
+.homeCatering__texto p {
+  margin: 0 0 1.75rem;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #ede4cf;
+  max-width: 52ch;
+}
+
+.homeCatering__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+/* La portada del catálogo, como si fuese un folleto sobre la mesa */
+.homeCatering__portada {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-self: center;
+  max-width: 300px;
+}
+
+.homeCatering__portada img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.homeCatering__portada:hover,
+.homeCatering__portada:focus-visible {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 900px) {
+  .homeCatering { padding: 3.5rem 1rem; }
+
+  .homeCatering__inner {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    text-align: center;
+  }
+
+  .homeCatering__texto p { margin-inline: auto; }
+  .homeCatering__actions { justify-content: center; }
+
+  /* La portada va primero en móvil: entra mejor por la vista */
+  .homeCatering__portada {
+    order: -1;
+    max-width: 230px;
+  }
+
+  .homeCatering .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeCatering__portada { transition: none; }
+}
+
 /* === FRANJA CTA === */
 .homeCtaBand {
   width: 100%;

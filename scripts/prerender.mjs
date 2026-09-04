@@ -13,6 +13,7 @@ const ROUTES = [
   '/pollo-asado-san-fernando-de-henares',
   '/paellas-san-fernando-de-henares',
   '/asados-por-encargo',
+  '/catering',
   '/pollos-asados-coslada',
   '/comida-para-llevar-coslada',
   '/paellas-coslada',

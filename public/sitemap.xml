@@ -36,6 +36,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.elkiloycuarto.es/catering</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.elkiloycuarto.es/pollos-asados-coslada</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
