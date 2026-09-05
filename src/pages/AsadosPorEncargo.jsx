@@ -144,6 +144,7 @@ export default function AsadosPorEncargo() {
           <ul>
             <li><a href="/pollo-asado-san-fernando-de-henares">Pollo asado</a></li>
             <li><a href="/paellas-san-fernando-de-henares">Paellas y arroces</a></li>
+            <li><a href="/catering">Catering para eventos y celebraciones</a></li>
             <li><a href="/ofertas">Menú del día y ofertas</a></li>
           </ul>
         </nav>

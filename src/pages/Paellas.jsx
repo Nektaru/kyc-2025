@@ -1,6 +1,7 @@
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
+import Faq from '../components/Faq'
 import TablaPaellas from '../components/TablaPaellas'
 import { menuPaellasJsonLd } from '../data/paellas'
 import '../components/localpage.css'
@@ -21,6 +22,29 @@ const BREADCRUMB_ITEMS = [
 const MENU_JSONLD = menuPaellasJsonLd(
   'https://www.elkiloycuarto.es/paellas-san-fernando-de-henares'
 )
+
+const PREGUNTAS = [
+  {
+    p: '¿Puedo encargar una paella para el mismo día?',
+    r: 'Depende del día y de cómo vayamos de encargos. Los arroces se hacen al momento, así que lo normal es avisar con antelación; llámanos y te decimos si podemos prepararla para hoy.',
+  },
+  {
+    p: '¿Qué tamaño de paella necesito?',
+    r: 'Hacemos dos tamaños: de 8–9 raciones y de 11–12 raciones. Si dudas, dinos cuántos vais a comer y si hay más entrantes en la mesa, y te orientamos.',
+  },
+  {
+    p: '¿La paella se entrega en la paellera?',
+    r: 'Sí. Se entrega en su propia paellera y se deja una fianza de 20 €, que te devolvemos íntegra cuando nos la traes de vuelta.',
+  },
+  {
+    p: '¿Hacéis arroces sin marisco?',
+    r: 'Sí. La paella valenciana lleva pollo y verduras, y también hacemos paella de verduras y el arroz de secreto ibérico con setas y trigueros. Coméntanos si hay alergias y te indicamos las opciones.',
+  },
+  {
+    p: '¿Se puede recoger caliente para comer al momento?',
+    r: 'Sí, lo habitual es que la recojas a la hora que nos digas para llevarla directamente a la mesa. Indícanos la hora al hacer el encargo.',
+  },
+]
 
 export default function Paellas() {
   return (
@@ -154,6 +178,8 @@ export default function Paellas() {
             </a>
           </div>
         </section>
+
+        <Faq items={PREGUNTAS} />
 
         <nav className="localPage__links" aria-label="Otras especialidades">
           <h2>También te puede interesar</h2>

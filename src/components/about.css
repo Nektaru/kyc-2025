@@ -1,135 +1,219 @@
-/* CONTENEDOR GENERAL */
-
-
-body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-
 .about {
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Cada tramo con fondo FULL-WIDTH */
+/* Antetítulo dorado, igual que en el resto de la web */
+.about__eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+/* ===== Cabecera ===== */
+.about__hero {
+  background: #263d4b;
+  color: #fef9ec;
+  text-align: center;
+  padding: 4rem 1.25rem 3.5rem;
+}
+
+.about__hero h1 {
+  margin: 0 auto 1.1rem;
+  max-width: 900px;
+  font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+  line-height: 1.15;
+  font-weight: 800;
+  text-wrap: balance;
+}
+
+.about__heroTexto {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ede4cf;
+  text-wrap: balance;
+}
+
+/* ===== Señas de identidad ===== */
+.about__valores {
+  background: #fff;
+  padding: 2.75rem 1.25rem;
+  border-bottom: 1px solid #f0ebdd;
+}
+
+.about__valoresGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  text-align: center;
+}
+
+.about__valoresGrid li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about__valorDato {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #263d4b;
+}
+
+.about__valorTexto {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* ===== Tramos alternos ===== */
 .about__section {
   --about-bg: #fff;
-  /* Alto total por tramo (desktop): por defecto 100vh */
-  --block-h: 70vh;
-  /* Alto de imagen + columna de texto (si activas is-compact será 60vh) */
-  --media-h: var(--block-h);
-
   background: var(--about-bg);
   width: 100%;
 }
 
-/* MODO COMPACTO: imagen/texto ~60vh, pero el tramo mantiene aire */
-.about__section.is-compact {
-  --block-h: 70vh;   /* el tramo sigue “a pantalla” */
-  --media-h: 60vh;    /* alto real de imagen y columna de texto */
-}
-
-/* Dos columnas */
 .about__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(60px, 4vw, 40px);
-  min-height: var(--block-h);
-  max-width: 1200px;
+  gap: 3.5rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: clamp(36px, 3vw, 28px);
-  font-family: 'Montserrat', sans-serif;
+  padding: 4.5rem 1.25rem;
 }
 
-/* Alternar orden */
 .about__section.is-reversed .about__media { order: 2; }
 .about__section.is-reversed .about__copy  { order: 1; }
 
-/* Columna IMAGEN */
-.about__media {
-  position: relative;
-  height: var(--media-h);
-  padding: 3.5rem 1rem 5rem 1rem;
-  border-radius: 14px;
-  overflow: hidden;
-}
 .about__media img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
-  border-radius: 15%;
-}
-
-
-.about__copy {
-  height: var(--media-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about__copyInner {
-  width: 100%;
-  max-width: 640px;
-  padding: clamp(16px, 3vw, 32px);
-  font-family: 'Montserrat', sans-serif;
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
 }
 
 .about__copyInner h2 {
-  font-size: clamp(26px, 3.2vw, 36px);
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   line-height: 1.2;
-  margin: 0 0 12px;
-  color: #222;
+  color: #1f1f1f;
   font-weight: 800;
 }
 
 .about__copyInner p {
-  font-size: clamp(16px, 1.9vw, 18px);
-  line-height: 1.6;
-  margin: 0;
-  color: #444;
+  margin: 0 0 1rem;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
 }
 
-/* Variante fondo oscuro */
+.about__copyInner p:last-child { margin-bottom: 0; }
+
+/* Tramo sobre fondo oscuro */
 .about__section.is-dark .about__copyInner h2 { color: #fff; }
-.about__section.is-dark .about__copyInner p  { color: #f0f0f0; }
+.about__section.is-dark .about__copyInner p  { color: #ede4cf; }
+
+/* ===== Cierre ===== */
+.about__cierre {
+  background: #fef9ec;
+  padding: 4.5rem 1.25rem;
+  text-align: center;
+}
+
+.about__cierreInner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about__cierreInner h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  line-height: 1.15;
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
+.about__cierreInner > p {
+  margin: 0 auto 1.75rem;
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.about__cierreActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.about__cierreActions .btn {
+  color: #263d4b;
+  border-color: #263d4b;
+}
+
+.about__cierreActions .btn--primary {
+  color: #222;
+}
 
 /* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .about__inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    /* El clamp original tenía el máximo por debajo del mínimo, así que
-       devolvía siempre 60px de hueco entre imagen y texto. */
-    gap: 0;
-    padding: 24px 16px 36px;
+@media (max-width: 900px) {
+  /* AOS desplaza estos bloques 100 px a un lado y los deja en opacity 0 hasta
+     que se dispara la animación. En móvil eso los sacaba de su sitio y, si la
+     animación no llega a ejecutarse, el contenido se queda invisible. En
+     pantallas pequeñas el deslizamiento lateral no aporta nada, así que se
+     desactiva. Va con !important porque hay que ganar a la hoja de AOS. */
+  .about [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
   }
 
-  /* Orden natural en móvil: imagen arriba, texto debajo */
+  .about__hero { padding: 3rem 1rem 2.75rem; }
+
+  .about__valores { padding: 2.25rem 1rem; }
+
+  .about__valoresGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 3rem 1rem;
+  }
+
+  /* Orden natural en móvil: foto arriba, texto debajo */
   .about__section.is-reversed .about__media { order: 0; }
   .about__section.is-reversed .about__copy  { order: 0; }
 
-  /* La altura fija en vh dejaba una caja casi cuadrada para una foto
-     apaisada: object-fit: cover recortaba los lados y ampliaba mucho.
-     Con la proporción real de las fotos (3:2) se ven enteras y sin zoom.
-     El padding inferior de 5rem era el que abría el hueco con el texto. */
-  .about__media {
-    height: auto;
-    aspect-ratio: 3 / 2;
-    padding: 0;
-    border-radius: 12px;
-  }
+  .about__cierre { padding: 3.5rem 1rem; }
 
-  .about__copy {
-    height: auto;
-    padding-block: 20px 0;
+  .about__cierreActions .btn {
+    width: 100%;
+    max-width: 320px;
   }
+}
 
-  .about__copyInner {
-    max-width: 720px;
-    padding-inline: 4px;
-  }
+@media (max-width: 600px) {
+  .about__copyInner p,
+  .about__cierreInner > p { font-size: 16px; }
+
+  .about__media img { border-radius: 14px; }
 }

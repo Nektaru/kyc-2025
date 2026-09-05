@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
 import Modal from '../components/Modal'
+import Faq from '../components/Faq'
 import { trackEvent } from '../analytics'
 import { TELEFONO, TELEFONO_TEL, HORARIO, DIRECCION, MAPS_URL } from '../data/negocio'
 import '../components/localpage.css'
@@ -29,14 +30,38 @@ const BREADCRUMB_ITEMS = [
   { label: 'Catering', to: '/catering' },
 ]
 
+// Respuestas tomadas de las condiciones que figuran en el propio catálogo.
+const PREGUNTAS = [
+  {
+    p: '¿Para qué tipo de eventos hacéis catering?',
+    r: 'Comuniones, cumpleaños, bautizos, reuniones familiares y eventos de empresa. El catálogo está pensado para picar y compartir, con formatos cómodos de servir.',
+  },
+  {
+    p: '¿Los precios del catálogo llevan IVA?',
+    r: 'Sí, todos los precios del catálogo incluyen IVA. En cada producto aparece además la base y el IVA desglosados.',
+  },
+  {
+    p: '¿Lleváis el catering al sitio del evento?',
+    r: 'Podemos prepararlo para que lo recojas o para servirlo, según lo que acordemos. El menaje y el transporte tienen un coste adicional que depende del tamaño del catering y de la distancia; consúltanos y te lo presupuestamos.',
+  },
+  {
+    p: '¿Con cuánta antelación hay que encargarlo?',
+    r: 'Cuanto antes mejor, sobre todo en fechas señaladas. Los encargos se confirman según disponibilidad, así que llámanos y vemos qué se puede preparar para tu fecha.',
+  },
+  {
+    p: '¿Puedo consultar los alérgenos?',
+    r: 'Sí, y te recomendamos hacerlo antes de cerrar el pedido. Dinos qué alergias o intolerancias hay entre los invitados y te indicamos qué productos son adecuados.',
+  },
+]
+
 export default function Catering() {
   const [zoom, setZoom] = useState(null)
 
   return (
     <main className="localPage catering">
       <Seo
-        title="Catering para eventos y celebraciones | Kilo y Cuarto"
-        description="Catálogo de catering 2026 de Kilo y Cuarto: empanadas, fritos y finger food para reuniones, celebraciones y eventos en San Fernando de Henares. Consúltalo online o descárgalo."
+        title="Catering para eventos en San Fernando de Henares | Kilo y Cuarto"
+        description="Catering para celebraciones, comuniones, cumpleaños y eventos de empresa en San Fernando de Henares: empanadas, fritos y finger food. Consulta el catálogo con precios."
         path="/catering"
       />
 
@@ -58,10 +83,10 @@ export default function Catering() {
         />
         <div className="catering__heroOverlay">
           <p className="localPage__eyebrow">Kilo y Cuarto</p>
-          <h1>Catering para tus celebraciones</h1>
+          <h1>Catering para eventos en San Fernando de Henares</h1>
           <p className="catering__heroTexto">
-            Empanadas, fritos y finger food para reuniones, comuniones,
-            cumpleaños y eventos de empresa. Cuenta con nosotros para tus
+            Empanadas, fritos y finger food para comuniones, cumpleaños,
+            reuniones y eventos de empresa. Cuenta con nosotros para tus
             momentos más especiales.
           </p>
         </div>
@@ -123,12 +148,35 @@ export default function Catering() {
         </ol>
 
         <h2>Cómo hacer tu encargo</h2>
+        <ol className="catering__pasos">
+          <li>
+            <strong>Elige.</strong> Combina los productos que quieras del
+            catálogo, o parte de una de nuestras selecciones si prefieres que
+            te lo demos hecho.
+          </li>
+          <li>
+            <strong>Confirma.</strong> Indícanos la fecha, el número de
+            personas, el horario y si necesitas bebida, menaje, transporte o
+            montaje.
+          </li>
+          <li>
+            <strong>Disfruta.</strong> Preparamos el pedido para recoger o
+            servir, según lo que hayamos acordado.
+          </li>
+        </ol>
         <p>
-          Dinos la fecha, el número de personas y qué te apetece del catálogo, y
-          te preparamos el presupuesto. Si no tienes claro qué elegir, cuéntanos
-          qué tipo de evento es y te orientamos: llevamos desde 1994 preparando
-          comida para celebraciones.
+          Los precios del catálogo incluyen IVA. El menaje y el transporte
+          tienen un coste adicional según el tamaño del catering y la
+          distancia. La disponibilidad, la presentación y los tamaños se
+          confirman al hacer el pedido.
         </p>
+        <p>
+          Si no tienes claro qué elegir, cuéntanos qué tipo de evento es y te
+          orientamos: llevamos desde 1994 preparando comida para
+          celebraciones en San Fernando de Henares y alrededores.
+        </p>
+
+        <Faq items={PREGUNTAS} />
 
         <section className="localPage__info">
           <h2>Consúltanos</h2>

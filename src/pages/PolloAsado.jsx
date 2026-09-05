@@ -23,8 +23,10 @@ export default function PolloAsado() {
 
       <header className="localPage__hero">
         <p className="localPage__eyebrow">Kilo y Cuarto</p>
+        {/* El {' '} es necesario: sin él, el texto del H1 se lee "asadoen San
+            Fernando" al extraerlo (lectores de pantalla y buscadores). */}
         <h1>
-          Pollo asado
+          Pollo asado{' '}
           <br />
           en San Fernando de Henares
         </h1>

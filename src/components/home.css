@@ -21,6 +21,13 @@ body {
   font-size: clamp(1.9rem, 3.6vw, 2.7rem);
   line-height: 1.15;
   font-weight: 800;
+  color: #1f1f1f;
+}
+
+/* Titulares sobre las franjas oscuras */
+.homeCatering__texto h2,
+.homeCtaBand__text h2 {
+  color: #fff;
 }
 
 /* === FRANJA DE INFORMACIÓN LOCAL (tras el Hero) === */

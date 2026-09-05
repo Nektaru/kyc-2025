@@ -37,7 +37,13 @@ export default function Ofertas() {
 
       <header className="ofertas__header">
         <p className="ofertas__eyebrow">Kilo y Cuarto</p>
-        <h1>Ofertas y menú del día en San Fernando de Henares</h1>
+        {/* El {' '} es necesario: sin él, el texto del H1 se lee "díaen San
+            Fernando" al extraerlo (lectores de pantalla y buscadores). */}
+        <h1>
+          Ofertas y menú del día{' '}
+          <br />
+          en San Fernando de Henares
+        </h1>
         <p className="ofertas__intro">
           Nuestras mejores ofertas de comida casera para llevar: pollo asado con
           complementos, menú del día de lunes a viernes y paellas. Toca cualquier
