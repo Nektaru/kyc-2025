@@ -106,8 +106,10 @@
     z-index: 3050;
   }
 
+  /* Alto suficiente para los 6 enlaces del menú; si se añade alguno más hay
+     que subirlo, porque el desplegable recorta lo que no cabe. */
   #nav-toggle:checked ~ .nav__menu {
-    max-height: 320px;
+    max-height: 420px;
   }
 
   .nav__link {

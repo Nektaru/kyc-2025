@@ -47,6 +47,7 @@ export default function NavBar() {
           <Link className={`nav__link ${pathname === '/' ? 'is-active' : ''}`} to="/" onClick={closeMenu}>Inicio</Link>
           <Link className={`nav__link ${pathname === '/ofertas' ? 'is-active' : ''}`} to="/ofertas" onClick={closeMenu}>Ofertas</Link>
           <Link className={`nav__link ${pathname === '/productos' ? 'is-active' : ''}`} to="/productos" onClick={closeMenu}>Nuestros productos</Link>
+          <Link className={`nav__link ${pathname === '/catering' ? 'is-active' : ''}`} to="/catering" onClick={closeMenu}>Catering</Link>
           <Link className={`nav__link ${pathname === '/about' ? 'is-active' : ''}`} to="/about" onClick={closeMenu}>¿Quiénes somos?</Link>
           <Link className={`nav__link ${pathname === '/contacto' ? 'is-active' : ''}`} to="/contacto" onClick={closeMenu}>Contacto</Link>
         </nav>

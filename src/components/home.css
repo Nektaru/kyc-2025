@@ -4,6 +4,25 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ============================================================
+   ESTILOS COMUNES DE LAS FRANJAS DE LA PORTADA
+   Antetítulo dorado + titular grande. Estaban repetidos en cada
+   sección con valores ligeramente distintos; ahora salen de aquí
+   para que todas las franjas se vean iguales.
+   ============================================================ */
+/* Un único tamaño de titular para toda la portada */
+.homeIntro__inner h2,
+.topSales__header h2,
+.homeCatering__texto h2,
+.homeCtaBand__text h2,
+.homeStory__texto h2,
+.homeValues__header h2 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
 /* === FRANJA DE INFORMACIÓN LOCAL (tras el Hero) === */
 .homeIntro {
   width: 100%;
@@ -15,23 +34,6 @@ body {
   max-width: 860px;
   margin: 0 auto;
   text-align: center;
-}
-
-.homeIntro__eyebrow {
-  margin: 0 0 1rem;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: #d4ad24;
-}
-
-.homeIntro__inner h2 {
-  margin: 0 0 1.25rem;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.12;
-  color: #1f1f1f;
-  font-weight: 800;
 }
 
 .homeIntro__text {
@@ -132,77 +134,6 @@ body {
   .homeIntro__text { font-size: 16px; }
 }
 
-/* === SECCIÓN ZIZZI === */
-.feature--zizzi {
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #FEF9EC;
-  padding: 6rem 0rem;
-}
-
-.feature__zizzi-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-  flex-wrap: nowrap;
-}
-
-.feature__zizzi-text {
-  flex: 1;
-  min-width: 300px;
-  max-width: 640px;
-  padding-right: 25%;
-  margin-left: -10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 1.2rem;
-}
-
-.feature__zizzi-text h2 {
-  font-size: 36px;
-  font-weight: 800;
-  color: #222;
-  line-height: 1.2;
-}
-
-.feature__zizzi-text p {
-  font-size: 18px;
-  color: #444;
-  line-height: 1.5;
-}
-
-.feature__zizzi-text .btn {
-  align-self: center;
-  margin-top: 2%;
-}
-
-/* Imágenes lado derecho */
-.feature__zizzi-images {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  min-width: 320px;
-}
-
-.feature__zizzi-images img {
-  width: 100%;
-  max-width: 550px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.feature__zizzi-images img:hover {
-  transform: scale(1.05);
-}
-
 /* === BOTONES === */
 .btn {
   display: inline-block;
@@ -230,55 +161,204 @@ body {
   filter: brightness(1.05);
 }
 
-/* === SECCIÓN EMPELLÓN === */
-.feature--empellon {
+/* === QUIÉNES SOMOS, EN CORTO === */
+.homeStory {
   width: 100%;
-  background-color: #3c4a51;
-  padding: 6rem 1rem;
-  display: flex;
-  justify-content: center;
+  background: #fef9ec;
+  padding: 4.5rem 1.25rem;
 }
 
-.empellon__cards {
+.homeStory__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.homeStory__texto h2 {
+  color: #1f1f1f;
+}
+
+.homeStory__texto p {
+  margin: 0 0 1rem;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 52ch;
+}
+
+.homeStory__actions {
   display: flex;
-  gap: 7rem;
   flex-wrap: wrap;
-  max-width: 1300px;
-  width: 100%;
-  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
 }
 
-.empellon__card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 550px;
-  text-align: center;
-  position: relative;
+.homeStory__actions .btn {
+  color: #263d4b;
+  border-color: #263d4b;
 }
 
-.empellon__card img {
+.homeStory__actions .btn--primary {
+  color: #222;
+}
+
+.homeStory__fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.homeStory__fotos img {
   width: 100%;
-  max-width: 1000px;
-  height: 500px;
-  border-radius: 14px;
+  height: 320px;
   object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.empellon__card:hover img {
-  transform: scale(1.03);
+/* La segunda foto, ligeramente desplazada: da algo de ritmo sin desordenar */
+.homeStory__fotos img:last-child {
+  transform: translateY(24px);
 }
 
-.empellon__caption {
-  margin-top: 2rem;
-  font-size: 18px;
-  color: #FEF9EC;
-  font-weight: 500;
-  line-height: 150%;
-  margin-bottom: 0; /* sin solapar la siguiente sección */
+.homeStory__fotos img:hover {
+  transform: translateY(-4px);
 }
 
+.homeStory__fotos img:last-child:hover {
+  transform: translateY(20px);
+}
 
+/* === CÓMO TRABAJAMOS === */
+.homeValues {
+  width: 100%;
+  /* Crema para no encadenar dos franjas blancas seguidas con "Lo más
+     pedido"; además las tarjetas blancas destacan más sobre este fondo. */
+  background: #fef9ec;
+  padding: 4.5rem 1.25rem;
+}
+
+.homeValues__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.homeValues__header {
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.homeValues__header h2 {
+  color: #1f1f1f;
+}
+
+.homeValues__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+/* Mismas tarjetas que "Lo más pedido", para que la página tenga un solo
+   lenguaje de tarjeta. */
+.homeValues__card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homeValues__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.1);
+}
+
+.homeValues__imageWrap {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.homeValues__imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.homeValues__card:hover .homeValues__imageWrap img {
+  transform: scale(1.04);
+}
+
+.homeValues__content {
+  padding: 1.5rem 1.4rem 1.6rem;
+}
+
+.homeValues__content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
+.homeValues__content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .homeStory,
+  .homeValues {
+    padding: 3.5rem 1rem;
+  }
+
+  .homeStory__inner {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    text-align: center;
+  }
+
+  .homeStory__texto p { margin-inline: auto; }
+  .homeStory__actions { justify-content: center; }
+
+  .homeStory__fotos img { height: 220px; }
+
+  /* Sin desplazamiento en móvil: dejaba un hueco raro al final */
+  .homeStory__fotos img:last-child,
+  .homeStory__fotos img:last-child:hover {
+    transform: none;
+  }
+
+  .homeValues__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .homeValues__imageWrap { height: 240px; }
+}
+
+@media (max-width: 600px) {
+  .homeStory__fotos { gap: 0.75rem; }
+  .homeStory__fotos img { height: 170px; }
+  .homeStory__texto p { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeStory__fotos img,
+  .homeValues__card,
+  .homeValues__imageWrap img {
+    transition: none;
+  }
+}
 
 /* === SECCIÓN MAPA (CARD 3) === */
 .feature--map {
@@ -321,23 +401,6 @@ body {
   max-width: 860px;
   margin: 0 auto 3rem;
   text-align: center;
-}
-
-.topSales__eyebrow {
-  margin: 0 0 1rem;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: #d4ad24;
-}
-
-.topSales__header h2 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.12;
-  color: #1f1f1f;
-  font-weight: 800;
 }
 
 .topSales__header p {
@@ -420,23 +483,6 @@ body {
   grid-template-columns: 1.25fr 0.75fr;
   align-items: center;
   gap: 3rem;
-}
-
-.homeCatering__eyebrow {
-  margin: 0 0 0.9rem;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: #d4ad24;
-}
-
-.homeCatering__texto h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  line-height: 1.15;
-  color: #fff;
-  font-weight: 800;
 }
 
 .homeCatering__texto p {
@@ -523,23 +569,6 @@ body {
 
 .homeCtaBand__text {
   max-width: 700px;
-}
-
-.homeCtaBand__eyebrow {
-  margin: 0 0 0.9rem;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: #d4ad24;
-}
-
-.homeCtaBand__text h2 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.15;
-  color: #fff;
-  font-weight: 800;
 }
 
 .homeCtaBand__actions {
@@ -656,75 +685,7 @@ body {
   }
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 1024px) {
-  .feature__zizzi-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .feature__zizzi-images {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature__zizzi-images img {
-    max-width: 90%;
-  }
-
-  .feature__zizzi-text {
-    padding-right: 0;
-    flex: 1;
-    min-width: 300px;
-    max-width: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    margin-top: -70px;
-  }
-
-  .feature__zizzi-text h2 {
-    font-size: 28px;
-  }
-
-  .feature__zizzi-text p {
-    font-size: 16px;
-  }
-
-  .empellon__cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Las fotos son display:block (reset global), así que el text-align:center
-     de la tarjeta no las centraba: se quedaban pegadas a la izquierda y
-     dejaban un hueco a la derecha. */
-  .empellon__card img {
-    max-width: 100%;
-    height: auto;
-    margin-inline: auto;
-    border-radius: 14px;
-  }
-}
-
 @media (max-width: 768px) {
-  /* En móvil la franja tenía 6rem de padding y 7rem de hueco entre las dos
-     fotos, lo que dejaba la sección muy desahogada y descuadrada. */
-  .feature--empellon {
-    padding: 3.5rem 1rem;
-  }
-
-  .empellon__cards {
-    gap: 2.5rem;
-  }
-
-  .empellon__caption {
-    margin-top: 1.2rem;
-    font-size: 16px;
-  }
-
   .feature--map {
     height: 240px;
     padding: 0;
@@ -736,11 +697,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .feature__zizzi-text {
-    padding-right: 10%;
-  }
-}
+
 
 
 @media (max-width: 768px) {
@@ -817,4 +774,36 @@ body {
 .reviewBand__btn:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(212, 173, 36, 0.45);
+}
+
+/* ============================================================
+   ANTETÍTULOS DORADOS DE LA PORTADA
+   Va al final y con el selector `p.x` a propósito: los antetítulos
+   son <p>, así que reglas como `.topSales__header p` o
+   `.homeCatering__texto p` (más específicas) los pisaban y salían
+   en gris a 17-18px en vez de dorados a 13px.
+   ============================================================ */
+p.home__eyebrow,
+p.homeIntro__eyebrow,
+p.topSales__eyebrow,
+p.homeCatering__eyebrow,
+p.homeCtaBand__eyebrow {
+  margin: 0 0 1rem;
+  max-width: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #d4ad24;
+}
+
+@media (max-width: 600px) {
+  p.home__eyebrow,
+  p.homeIntro__eyebrow,
+  p.topSales__eyebrow,
+  p.homeCatering__eyebrow,
+  p.homeCtaBand__eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
 }

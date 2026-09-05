@@ -101,21 +101,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección estilo Zizzi con AOS */}
-      <section className="feature feature--zizzi" data-aos="fade-up" data-aos-delay="100">
-        <div className="feature__zizzi-container">
-          <div className="feature__zizzi-text" data-aos="fade-up" data-aos-delay="200">
+      {/* Quiénes somos, en corto */}
+      <section className="homeStory" data-aos="fade-up">
+        <div className="homeStory__inner">
+          <div className="homeStory__texto">
+            <p className="home__eyebrow">Desde 1994</p>
             <h2>Cocinamos como tu abuela</h2>
             <p>
-              Desde 1994 compartimos mesa contigo con la misma ilusión de siempre. Cada plato que servimos está elaborado con el cariño y la dedicación de una comida hecha en casa.<br />
-              <br />
-              Sabores auténticos, producto fresco y mucho por disfrutar.
+              Compartimos mesa contigo con la misma ilusión de siempre. Cada
+              plato que servimos está elaborado con el cariño y la dedicación
+              de una comida hecha en casa.
             </p>
-            <a className="btn btn--primary btn--small" href="/productos">Ver carta</a>
+            <p>Sabores auténticos, producto fresco y mucho por disfrutar.</p>
+            <div className="homeStory__actions">
+              <a className="btn btn--primary" href="/productos">Ver la carta</a>
+              <a className="btn" href="/about">Nuestra historia</a>
+            </div>
           </div>
-          <div className="feature__zizzi-images">
-            <img src={imagen1Url} srcSet={imagen1Set} sizes="(max-width: 900px) 90vw, 550px" alt="Croquetas de cocido" width="1024" height="683" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="100" />
-            <img src={imagen3Url} srcSet={imagen3Set} sizes="(max-width: 900px) 90vw, 550px" alt="Paella de pulpo y gambones" width="1100" height="1100" loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="200" />
+
+          <div className="homeStory__fotos">
+            <img
+              src={imagen1Url}
+              srcSet={imagen1Set}
+              sizes="(max-width: 900px) 90vw, 420px"
+              alt="Croquetas de cocido caseras"
+              width="1024"
+              height="683"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={imagen3Url}
+              srcSet={imagen3Set}
+              sizes="(max-width: 900px) 90vw, 420px"
+              alt="Paella de pulpo y gambones"
+              width="1100"
+              height="1100"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -164,17 +188,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección estilo Empellón igual que antes */}
-      <section className="feature feature--empellon" data-aos="fade-up" data-aos-delay="600">
-        <div className="empellon__cards">
-          <div className="empellon__card" data-aos="fade-up" data-aos-delay="100">
-            <img src={imagen2Url} srcSet={imagen2Set} sizes="(max-width: 900px) 90vw, 560px" alt="Platos elaborados con producto de calidad" width="1100" height="733" loading="lazy" decoding="async" />
-            <p className="empellon__caption">Elaboramos nuestros platos con <br></br>materias primas seleccionadas de la más alta calidad.</p>
-          </div>
+      {/* Cómo trabajamos: producto y proximidad */}
+      <section className="homeValues" data-aos="fade-up">
+        <div className="homeValues__inner">
+          <header className="homeValues__header">
+            <p className="home__eyebrow">Nuestra forma de trabajar</p>
+            <h2>Buen producto y comercio de barrio</h2>
+          </header>
 
-          <div className="empellon__card" data-aos="fade-up" data-aos-delay="200">
-            <img src={imagen4Url} srcSet={imagen4Set} sizes="(max-width: 900px) 90vw, 560px" alt="Productos de proximidad" width="1100" height="733" loading="lazy" decoding="async" />
-            <p className="empellon__caption">Priorizamos los productos de proximidad,<br></br> por lo que apoyamos siempre el comercio local. </p>
+          <div className="homeValues__grid">
+            <article className="homeValues__card" data-aos="fade-up" data-aos-delay="100">
+              <div className="homeValues__imageWrap">
+                <img
+                  src={imagen2Url}
+                  srcSet={imagen2Set}
+                  sizes="(max-width: 900px) 90vw, 520px"
+                  alt="Cocinera preparando platos en la cocina de Kilo y Cuarto"
+                  width="1100"
+                  height="733"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="homeValues__content">
+                <h3>Materias primas seleccionadas</h3>
+                <p>
+                  Elaboramos nuestros platos con materias primas seleccionadas
+                  de la más alta calidad.
+                </p>
+              </div>
+            </article>
+
+            <article className="homeValues__card" data-aos="fade-up" data-aos-delay="250">
+              <div className="homeValues__imageWrap">
+                <img
+                  src={imagen4Url}
+                  srcSet={imagen4Set}
+                  sizes="(max-width: 900px) 90vw, 520px"
+                  alt="Verduras frescas de proveedores cercanos"
+                  width="1100"
+                  height="733"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="homeValues__content">
+                <h3>Productos de proximidad</h3>
+                <p>
+                  Priorizamos los productos de proximidad, por lo que apoyamos
+                  siempre el comercio local.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
